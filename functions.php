@@ -270,9 +270,7 @@ function seed_get_the_archive_title($title)
 /**
  * Custom WooCommerce Settings
  */
-if ($GLOBALS['s_is_woo']) {
-    require get_template_directory() . '/inc/woocommerce.php';
-}
+require get_template_directory() . '/inc/woocommerce.php';
 
 
 /**
