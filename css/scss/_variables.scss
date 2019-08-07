@@ -1,0 +1,96 @@
+// out: false
+
+//== GENERAL
+$primary: #1e5342;
+$primary-hover: #718f7f;
+$base: #333;
+$line: #ddd;
+$gray: #878f9d;
+
+//== BUTTON
+$button-bg: $primary;
+$button-text: #fff;
+$button-hover-bg: $primary-hover;
+$button-hover-text: #fff;
+$button-border-radius: 100px;
+
+//== BOX/CARD
+$box-bg: #fff;
+$box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+$box-border-radius: 3px;
+$box-padding: 15px;
+/*
+$box-shadow: none;
+$box-border-radius: 0;
+$box-padding: 0;
+*/
+$submenu-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+
+//== FONTS
+$heading-font: "IBM Plex Thai", sans-serif; // Maledpan;
+$heading-font-weight: 500;
+$heading-line-height: 1.4;
+$body-font: "Sarabun", sans-serif;
+$body-font-size: 16px;
+$body-line-height: 1.625;
+
+//== SPACE (Gutter)
+$space-m: 16px;
+$space-d: 30px;
+
+//== HEADER
+$header-m-height: 50px;
+$header-m-bg: #fff;
+$header-m-text: $base;
+
+$header-d-height: 70px;
+$header-d-bg: #fff;
+$header-d-text: $base;
+$header-d-line: #eee;
+$header-d-hover-text: $primary;
+
+$nav-m-bg: $base;
+$nav-m-text: #fff;
+
+$nav-d-bg: #fff;
+$nav-d-text: $base;
+
+//== BODY
+$html-bg: $base;
+$body-bg: #fff;
+$body-text: $base;
+
+//== TITLE (For Banner style, except Size.)
+$title-bg: #000;
+$title-bg-blank: linear-gradient(124deg, $primary 0%, $primary-hover 100%);
+$title-bg-opacity: 0.7;
+$title-blur: 20px; // none, 10px, 20px, etc.
+$title-text: #fff;
+$title-m-height: 120px;
+$title-d-height: 220px;
+$title-m-size: 24px;
+$title-d-size: 32px;
+
+//== LINK
+$link-text: $primary;
+$link-hover-text: $primary-hover;
+$link-active-text: $base;
+$text-muted: $gray;
+
+//== TABLE
+$table-line: $line;
+$table-th-bg: #eee;
+$table-th-text: $base;
+
+//== FORM
+$form-bg-bg: #f2f2f2;
+$form-bg: #fff;
+$input-bg: #fbfbfb;
+$input-border: 1px solid rgb(220, 224, 228);
+$input-border-radius: 0;
+
+//== FOOTER
+$footer-m-bg: $primary;
+$footer-m-text: rgba(255, 255, 255, 0.7);
+$footer-m-height: 40px;
+$footer-d-height: 50px;

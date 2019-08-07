@@ -1,0 +1,148 @@
+[
+    {
+        "key": "group_5d1a01feea33c",
+        "title": "Title",
+        "fields": [
+            {
+                "key": "field_5d1a0217cf408",
+                "label": "Title Style",
+                "name": "title_style",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "banner": "Banner",
+                    "minimal": "Minimal",
+                    "hidden": "Hidden"
+                },
+                "default_value": [
+                    "banner"
+                ],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5d1a0350fc654",
+                "label": "Banner Image",
+                "name": "banner",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d1a0217cf408",
+                            "operator": "==",
+                            "value": "banner"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5d1a0527f6a99",
+                "label": "Banner Blur",
+                "name": "banner_blur",
+                "type": "range",
+                "instructions": "Default is 20",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d1a0217cf408",
+                            "operator": "==",
+                            "value": "banner"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": 20,
+                "min": 0,
+                "max": 40,
+                "step": 5,
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5d1a1731cd08c",
+                "label": "Banner Opacity",
+                "name": "banner_opacity",
+                "type": "range",
+                "instructions": "Default is 0.7",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d1a0217cf408",
+                            "operator": "==",
+                            "value": "banner"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "0.7",
+                "min": "0.5",
+                "max": 1,
+                "step": "0.05",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]

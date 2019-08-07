@@ -1,0 +1,13 @@
+#customize-theme-controls
+   .customize-control-kirki-dimensions
+   .wrapper
+   .control
+   > div
+   h5 {
+   margin-top: 0;
+}
+#wp-admin-bar-wp-logo,
+#wpwrap .n2-box-template-library,
+#wpwrap .n2-box-add-sample-slide {
+   display: none;
+}

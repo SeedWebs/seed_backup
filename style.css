@@ -1,0 +1,31 @@
+/*
+Theme Name: Seed
+Theme URI: https://th.seedthemes.com/item/seed/
+Author: SeedThemes
+Author URI: https://SeedThemes.com
+Description: Starter Theme
+Version: 2.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: seed
+Tags: featured-images, custom-menu
+*/
+
+/*
+===========================================
+
+This theme use SCSS, please check
+
+1. css/scss/_variables.scss - for some colors & styles.
+2. css/scss/mobile.scss - will be compiled to css/mobile.css and used for mobile version.
+2. css/scss/desktop.scss - will be compiled to css/desktop.css and used for desktop version.
+3. If you set $GLOBALS['s_style_css'] in functions.php to 'enable', you can add CSS to this file to override all CSS.
+    
+=========================================== 
+*/
+
+/*
+body {
+	border: 5px solid #c00;
+}
+*/
