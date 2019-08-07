@@ -6,7 +6,7 @@ Seed is a commercial WordPress theme available in Seed Kit from https://th.seedt
 
 This repository does not include img and font folders. Then it will not work as a complete theme. Please purchase a valid license and download from SeedThemes.com. We do not provide support to anyone that does not hold a valid license key.
 
-#THAI LANGUAGE
+## THAI LANGUAGE
 
 ธีม Seed นี้ เป็นธีมที่ขายรวมอยู่ในชุด Seed Kit ทางเว็บไซต์ https://th.seedthemes.com/seed-kit/. เราเผยแพร่ธีมใน Github เพื่อจะได้สะดวกต่อการตรวจสอบโค้ดต่างๆ ทั้งต่อนักพัฒนาและผู้ใช้่งานทั่วไป หากมีคำแนะนำ, พบเจอบั๊ก หรือต้องการส่งโค้ดมาช่วยแก้ สามารถทำผ่านระบบของ Github นี้ได้ทันที
 
