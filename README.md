@@ -1,3 +1,5 @@
+![Seed 2 Cover](https://seedcdn.com/i/seed2-cover.jpg)
+
 # Seed 2
 
 WordPress Starter Theme from SeedThemes
