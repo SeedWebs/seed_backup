@@ -16,6 +16,11 @@ This repository does not include img and font folders. Then it will not work as 
 
 ## Change Log
 
+### 2.0.2
+
+-   Date: 8 AUG 2019
+-   Tweak: Support Child Theme ( use get_theme_file_uri() )
+
 ### 2.0.1
 
 -   Date: 8 AUG 2019
