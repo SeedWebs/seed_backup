@@ -75,21 +75,25 @@
 
         <br>
 
-        <h2 class="s-title">CONTENT • LIST</h2>
+        <h2 class="s-title">CONTENT • LIST • PAGINATION</h2>
         <div class="s-grid -d2">
             <?php 
+            $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 			$args = array(
                 'posts_per_page' => 6,
-                'orderby' => 'rand'
+                'paged' => $paged 
 			);
 			$the_query = new WP_Query( $args );
             while ( $the_query->have_posts() ) {
                 $the_query->the_post();
                 get_template_part( 'template-parts/content', 'list' );
             }
-            wp_reset_postdata();
             ?>
         </div>
+        <?php
+            seed_posts_navigation($the_query);
+            wp_reset_postdata();
+        ?>
 
         <br>
 

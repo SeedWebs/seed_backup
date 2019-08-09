@@ -113,14 +113,16 @@ function seed_category_transient_flusher() {
 add_action( 'edit_category', 'seed_category_transient_flusher' );
 add_action( 'save_post',     'seed_category_transient_flusher' );
 
-
 /**
  * Output Numbered Pagination
  * https://codex.wordpress.org/Function_Reference/paginate_links
  */
-function seed_posts_navigation() {
+function seed_posts_navigation($wp_query = NULL) {
+	if(!$wp_query) {
+		global $wp_query; 
+	}
 	printf('<div class="content-pagination">');
-	global $wp_query; $big = 9999999; 
+	$big = 9999999; 
 	echo paginate_links( 
 		array(
 				'base' 		=> str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
@@ -132,8 +134,6 @@ function seed_posts_navigation() {
 		));
 	printf('</div>');
 }
-
-
 
 /**
  * Output Logo (from functions.php or Custom Logo)
@@ -159,7 +159,6 @@ function seed_title() {
 	}
     echo '<' . $tag . ' class="site-title"><a href="' . esc_url( home_url( '/' ) ) .'" rel="home">' . get_bloginfo( 'name' ) . '</a></' . $tag. '>';
 }
-
 
 /*
  * Output Member Menu
@@ -253,7 +252,6 @@ function seed_banner_bg($post_id) {
 		echo $banner_bg;
 	} 
 }
-
 
 /*
  * Output Author Avatar & Profile in .content-item
