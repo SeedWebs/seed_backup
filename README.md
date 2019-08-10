@@ -16,6 +16,13 @@ This repository does not include img and font folders. Then it will not work as 
 
 ## Change Log
 
+### 2.0.3
+
+-   Date: 10 AUG 2019
+-   Fix: Date Time in seed_posted_on()
+-   Tweak: Allow pagination for custom query.
+-   Tweak: Update Seed Demo (show pagination)
+
 ### 2.0.2
 
 -   Date: 8 AUG 2019
