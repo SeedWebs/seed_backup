@@ -498,10 +498,10 @@ a.s-button,
         background-color: $button-hover-bg;
     }
 }
-
 .s-box {
     box-shadow: $box-shadow;
     border-radius: $box-border-radius;
+    border: $box-border;
 }
 .s-scroll {
     -webkit-overflow-scrolling: touch;
@@ -683,6 +683,85 @@ a.s-button,
                 content: "";
                 clear: both;
             }
+        }
+    }
+}
+
+.s-modal {
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    width: 94vw;
+    max-width: 750px;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+    z-index: 1100;
+    &.-visible {
+        opacity: 1;
+        height: auto;
+        max-height: 94vh;
+        pointer-events: auto;
+        overflow: visible;
+        padding: 10px 20px 8px;
+    }
+    &-trigger {
+        display: inline-block;
+    }
+    &-bg {
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.65);
+        display: none;
+        &.-blacked-out {
+            display: block;
+        }
+    }
+    &-content {
+        height: 100%;
+        -webkit-overflow-scrolling: touch;
+        overflow: scroll;
+        padding: 0 16px;
+    }
+    &-close {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        font-size: 24px;
+        padding: 10px;
+        line-height: 24px;
+        background-color: $gray;
+        height: 44px;
+        width: 44px;
+        z-index: 10;
+        color: #fff;
+        cursor: pointer;
+        &:hover {
+            background-color: #000;
+        }
+    }
+    &-login {
+        max-width: 400px;
+        @media (min-width: 992px) {
+            max-height: 400px;
+        }
+    }
+    @media (min-width: 768px) {
+        &-content {
+            padding: 0 30px;
+        }
+        &.-visible {
+            padding: 20px 30px 10px;
         }
     }
 }
