@@ -16,6 +16,13 @@ This repository does not include img and font folders. Then it will not work as 
 
 ## Change Log
 
+### 2.0.4
+
+-   Date: 21 AUG 2019
+-   Fix: Warning: filemtime(): stat failed.
+-   Tweak: Move .s-modal to \_begin.scss, Add \$box-border
+-   New: Add Slider / contnet-headline.php
+
 ### 2.0.3
 
 -   Date: 10 AUG 2019
