@@ -172,7 +172,7 @@
         <div class="s-space"></div>
 
 
-        <h2 class="s-title">CONTENT</h2>
+        <h2 class="s-title">GRID • CONTENT</h2>
         <div class="s-grid -d3">
             <?php 
 			$args = array(
