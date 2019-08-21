@@ -503,6 +503,12 @@ a.s-button,
     border-radius: $box-border-radius;
     border: $box-border;
 }
+.s-space {
+    margin-bottom: $space-m;
+    @media (min-width: 992px) {
+        margin-bottom: $space-d;
+    }
+}
 .s-scroll {
     -webkit-overflow-scrolling: touch;
     overflow: scroll;
@@ -564,7 +570,7 @@ a.s-button,
 .s-slider {
     margin: 0 -#{$space-m/2};
     height: 100%;
-    &.-full {
+    &.-large {
         margin-left: -$space-m;
         margin-right: -$space-m;
         .slider {
@@ -574,6 +580,47 @@ a.s-button,
         @media (min-width: 992px) {
             margin-left: 0;
             margin-right: 0;
+        }
+    }
+    &.-full {
+        margin-left: -$space-m;
+        margin-right: -$space-m;
+        .slider {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @media (min-width: 768px) {
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+        }
+    }
+    &.-dots-in {
+        .flickity-page-dots {
+            bottom: 10px;
+            .dot {
+                background: #fff;
+                opacity: 0.5;
+                &.is-selected {
+                    opacity: 1;
+                }
+            }
+            @media (min-width: 768px) {
+                bottom: 15px;
+            }
+        }
+        .flickity-prev-next-button {
+            color: #fff;
+            @media (min-width: 768px) {
+                &.previous {
+                    left: 20px;
+                }
+                &.next {
+                    right: 20px;
+                }
+            }
+        }
+        .slider {
+            padding-bottom: 0;
         }
     }
     .slider {

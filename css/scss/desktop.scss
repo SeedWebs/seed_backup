@@ -196,7 +196,6 @@ body.headbar-d {
     &.-hero {
         border-radius: $box-border-radius;
         overflow: hidden;
-        margin: 0;
         display: grid;
         grid-template-columns: 73fr 38fr;
         .pic {

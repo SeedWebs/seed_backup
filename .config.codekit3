@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "31491",
 "files": {
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
 	"/.prettierignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -816,17 +824,6 @@
 		"oAP": "/home.php",
 		"oF": 0
 		},
-	"/img/banner.jpg": {
-		"ft": 16384,
-		"iS": 18594,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/img/banner.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 100
-		},
 	"/img/loading.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1016,6 +1013,25 @@
 		"oA": 2,
 		"oAP": "/page.php",
 		"oF": 0
+		},
+	"/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"/rtl.css": {
 		"aP": 1,

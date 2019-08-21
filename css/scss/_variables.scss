@@ -24,8 +24,8 @@ $box-padding: 15px;
 $box-shadow: none;
 $box-border-radius: 0;
 $box-padding: 0;
+$box-border: 1px solid ;
 */
-$submenu-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 
 //== FONTS
 $heading-font: "IBM Plex Thai", sans-serif; // Maledpan;
@@ -43,7 +43,6 @@ $space-d: 30px;
 $header-m-height: 50px;
 $header-m-bg: #fff;
 $header-m-text: $base;
-
 $header-d-height: 70px;
 $header-d-bg: #fff;
 $header-d-text: $base;
@@ -53,9 +52,10 @@ $header-d-hover-text: $primary;
 $nav-m-bg: $base;
 $nav-m-text: #fff;
 $nav-m-line: rgba(255, 255, 255, 0.2);
-
 $nav-d-bg: #fff;
 $nav-d-text: $base;
+
+$submenu-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 
 //== BODY
 $html-bg: $base;
@@ -72,6 +72,11 @@ $title-m-height: 120px;
 $title-d-height: 220px;
 $title-m-size: 24px;
 $title-d-size: 32px;
+
+//== SLIDER
+$slider-bg: #000;
+$slider-text: #fff;
+$slider-opacity: 0.7;
 
 //== LINK
 $link-text: $primary;
