@@ -118,6 +118,88 @@
                 "step": "0.05",
                 "prepend": "",
                 "append": ""
+            },
+            {
+                "key": "field_5d5521ba74c0c",
+                "label": "Headline Style",
+                "name": "headline_style",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "1": "Title on faded banner",
+                    "2": "Title on bright banner",
+                    "3": "Banner image only"
+                },
+                "default_value": [
+                    1
+                ],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5d551d91f7c04",
+                "label": "Headline Title",
+                "name": "headline_title",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d5521ba74c0c",
+                            "operator": "!=",
+                            "value": "3"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d551d9ff7c05",
+                "label": "Headline Subtitle",
+                "name": "headline_subtitle",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d5521ba74c0c",
+                            "operator": "!=",
+                            "value": "3"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             }
         ],
         "location": [
