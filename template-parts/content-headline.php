@@ -9,22 +9,31 @@ HEADLINE STYLE
 2 : Title on bright banner
 3 : Banner image only
 */
-$banner_style    = '-faded';
+
+$headline_style    = get_field("headline_style");
 $headline_title    = '';
 $headline_subtitle = '';
-$headline_style    = get_field("headline_style");
+$banner_style      = '';
 
-if( $headline_style == '2' || $headline_style == '3') {
-    $banner_style = '-bright';
+switch ($headline_style) {
+    case "1":
+        $headline_title    = get_field("headline_title");
+        $headline_subtitle = get_field("headline_subtitle");
+        break;
+    case "2":
+        $headline_title    = get_field("headline_title");
+        $headline_subtitle = get_field("headline_subtitle");
+        $banner_style = '-bright';
+        break;
+    case "3":
+        $banner_style = '-bright -notitle';
+        break;
 }
-if( $headline_style == '2' || $headline_style  == '1') {
-    $headline_title    = get_field("headline_title");
-    $headline_subtitle = get_field("headline_subtitle");
-}
+
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('content-headline'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('content-headline ' . $banner_style); ?>>
     <a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title_attribute(); ?>" rel="bookmark">
-        <div class="pic <?php echo $banner_style; ?>">
+        <div class="pic">
             <?php if(has_post_thumbnail()) { the_post_thumbnail('full');} else { echo '<img src="' . esc_url( get_template_directory_uri()) .'/img/thumb.jpg" alt="'. get_the_title() .'" />'; }?>
         </div>
         <div class="info">

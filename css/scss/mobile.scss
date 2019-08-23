@@ -603,6 +603,18 @@
     a {
         color: $slider-text;
     }
+    &.-bright {
+        .pic {
+            img {
+                opacity: 1;
+            }
+        }
+    }
+    &.-notitle {
+        .info {
+            display: none;
+        }
+    }
     .pic {
         img {
             width: 100%;
