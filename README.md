@@ -16,6 +16,11 @@ This repository does not include img and font folders. Then it will not work as 
 
 ## Change Log
 
+### 2.0.5
+
+-   Date: 23 AUG 2019
+-   New: Add ACF field group for Headline: \_acf-field-groups.json
+
 ### 2.0.4
 
 -   Date: 21 AUG 2019
