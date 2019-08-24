@@ -16,6 +16,11 @@ This repository does not include img and font folders. Then it will not work as 
 
 ## Change Log
 
+### 2.0.6
+
+-   Date: 24 AUG 2019
+-   Tweak: Adjust CSS for Headline Styles. (\_begin.scss)
+
 ### 2.0.5
 
 -   Date: 23 AUG 2019

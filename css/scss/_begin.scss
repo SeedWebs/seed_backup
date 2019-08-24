@@ -502,6 +502,7 @@ a.s-button,
     box-shadow: $box-shadow;
     border-radius: $box-border-radius;
     border: $box-border;
+    overflow: hidden;
 }
 .s-space {
     margin-bottom: $space-m;
