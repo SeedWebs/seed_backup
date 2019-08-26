@@ -194,6 +194,9 @@ font name: Seed-Icons
 .si-cart-o:before {
     content: "\e91a";
 }
+.si-bag-alt:before {
+    content: "\e94a";
+}
 .si-bag:before {
     content: "\e91b";
 }
@@ -224,165 +227,186 @@ font name: Seed-Icons
 .si-fax-o:before {
     content: "\e924";
 }
-.si-clock:before {
+.si-calendar:before {
+    content: "\e960";
+}
+.si-calendar-alt:before {
     content: "\e925";
 }
-.si-user:before {
+.si-clock:before {
     content: "\e926";
 }
-.si-folder:before {
+.si-user:before {
     content: "\e927";
 }
-.si-tag:before {
+.si-folder:before {
     content: "\e928";
 }
-.si-comment:before {
+.si-tag:before {
     content: "\e929";
 }
-.si-upload:before {
+.si-comment:before {
     content: "\e92a";
 }
-.si-download:before {
+.si-upload:before {
     content: "\e92b";
 }
-.si-plus:before {
+.si-download:before {
     content: "\e92c";
 }
-.si-minus:before {
+.si-plus:before {
     content: "\e92d";
 }
-.si-arrow-left:before {
+.si-minus:before {
     content: "\e92e";
 }
-.si-arrow-right:before {
+.si-arrow-left:before {
     content: "\e92f";
 }
-.si-arrow-up:before {
+.si-arrow-right:before {
     content: "\e930";
 }
-.si-arrow-down:before {
+.si-arrow-up:before {
     content: "\e931";
 }
-.si-check:before {
+.si-arrow-down:before {
     content: "\e932";
 }
-.si-cross:before {
+.si-check-o:before {
     content: "\e933";
 }
-.si-ellipsis:before {
+.si-cross-o:before {
     content: "\e934";
 }
-.si-chevron-left:before {
+.si-check:before {
+    content: "\e95b";
+}
+.si-cross:before {
+    content: "\e95c";
+}
+.si-dashboard:before {
+    content: "\e95d";
+}
+.si-ellipsis:before {
     content: "\e935";
 }
-.si-chevron-right:before {
+.si-chevron-left:before {
     content: "\e936";
 }
-.si-chevron-down:before {
+.si-chevron-right:before {
     content: "\e937";
 }
-.si-chevron-up:before {
+.si-chevron-down:before {
     content: "\e938";
 }
-.si-caret-left:before {
+.si-chevron-up:before {
     content: "\e939";
 }
-.si-caret-right:before {
+.si-caret-left:before {
     content: "\e93a";
 }
-.si-caret-down:before {
+.si-caret-right:before {
     content: "\e93b";
 }
-.si-caret-up:before {
+.si-caret-down:before {
     content: "\e93c";
 }
-.si-angle-left:before {
+.si-caret-up:before {
     content: "\e93d";
 }
-.si-angle-right:before {
+.si-angle-left:before {
     content: "\e93e";
 }
-.si-angle-up:before {
+.si-angle-right:before {
     content: "\e93f";
 }
-.si-angle-down:before {
+.si-angle-up:before {
     content: "\e940";
 }
-.si-eye:before {
+.si-angle-down:before {
     content: "\e941";
 }
-.si-qrcode:before {
+.si-eye:before {
     content: "\e942";
 }
-.si-barcode:before {
+.si-qrcode:before {
     content: "\e943";
 }
-.si-ampersand:before {
+.si-barcode:before {
     content: "\e944";
 }
-.si-cog:before {
+.si-ampersand:before {
     content: "\e945";
 }
-.si-book:before {
+.si-cog:before {
     content: "\e946";
 }
-.si-info:before {
+.si-book:before {
     content: "\e947";
 }
-.si-info-o:before {
+.si-info:before {
     content: "\e948";
 }
-.si-file-pdf:before {
+.si-info-o:before {
     content: "\e949";
 }
-.si-thailand:before {
-    content: "\e94a";
+.si-file:before {
+    content: "\e95e";
 }
-.si-facebook:before {
+.si-file-pdf:before {
     content: "\e94b";
 }
-.si-facebook-circled:before {
+.si-facebook:before {
     content: "\e94c";
 }
-.si-facebook-squared:before {
+.si-facebook-circled:before {
     content: "\e94d";
 }
-.si-twitter:before {
+.si-facebook-squared:before {
     content: "\e94e";
 }
-.si-twitter-circled:before {
+.si-twitter:before {
     content: "\e94f";
 }
-.si-line:before {
+.si-twitter-circled:before {
     content: "\e950";
 }
-.si-line-circle:before {
+.si-line:before {
     content: "\e951";
 }
-.si-line-square:before {
+.si-line-circle:before {
     content: "\e952";
 }
-.si-vimeo:before {
+.si-line-square:before {
     content: "\e953";
 }
-.si-vimeo-circle:before {
+.si-vimeo:before {
     content: "\e954";
 }
-.si-instagram:before {
+.si-vimeo-circle:before {
     content: "\e955";
 }
-.si-youtube:before {
+.si-instagram:before {
     content: "\e956";
 }
-.si-youtube-circle:before {
+.si-instagram-circled:before {
+    content: "\e961";
+}
+.si-youtube:before {
     content: "\e957";
 }
-.si-pinterest:before {
+.si-youtube-circle:before {
     content: "\e958";
 }
-.si-google-logo:before {
+.si-pinterest:before {
     content: "\e959";
 }
-.si-facebook-logo:before {
+.si-pinterest-circled:before {
+    content: "\e962";
+}
+.si-google-logo:before {
     content: "\e95a";
+}
+.si-facebook-logo:before {
+    content: "\e95f";
 }
