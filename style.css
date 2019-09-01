@@ -18,8 +18,8 @@ This theme use SCSS, please check
 
 1. css/scss/_variables.scss - for some colors & styles.
 2. css/scss/mobile.scss - will be compiled to css/mobile.css and used for mobile version.
-2. css/scss/desktop.scss - will be compiled to css/desktop.css and used for desktop version.
-3. If you set $GLOBALS['s_style_css'] in functions.php to 'enable', you can add CSS to this file to override all CSS.
+3. css/scss/desktop.scss - will be compiled to css/desktop.css and used for desktop version.
+4. If you set $GLOBALS['s_style_css'] in functions.php to 'enable', you can add CSS to this file to override all CSS.
     
 =========================================== 
 */
