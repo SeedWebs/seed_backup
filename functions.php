@@ -272,6 +272,10 @@ if ($GLOBALS['s_is_woo']) {
     require get_template_directory() . '/inc/woocommerce.php';
 }
 
+/**
+ * Custom Shortcode
+ */
+require get_template_directory() . '/inc/shortcode.php';
 
 /**
  * Redirect after login -  to current page
