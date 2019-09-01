@@ -9,11 +9,14 @@ HEADLINE STYLE
 2 : Title on bright banner
 3 : Banner image only
 */
-
-$headline_style    = get_field("headline_style");
+$headline_style = "1";
 $headline_title    = '';
 $headline_subtitle = '';
 $banner_style      = '';
+
+if (function_exists('get_field')) {
+    $headline_style    = get_field("headline_style");
+}
 
 switch ($headline_style) {
     case "1":
