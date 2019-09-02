@@ -16,6 +16,12 @@ This repository does not include img and font folders. Then it will not work as 
 
 ## Change Log
 
+### 2.0.7
+
+-   Date: 2 SEP 2019
+-   New: Icon font (now 99 icons)
+-   New: Shortcode: s_loop
+
 ### 2.0.6
 
 -   Date: 24 AUG 2019
