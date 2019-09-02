@@ -650,7 +650,7 @@ a.s-button,
     &.-m1\.4 {
         margin-right: -$space-m;
         .slider {
-            width: 70%;
+            width: 71%;
         }
     }
     &.-m2 {
@@ -671,7 +671,7 @@ a.s-button,
     }
     @media (min-width: 992px) {
         &.-m1\.2,
-        &.-m1\.5 {
+        &.-m1\.4 {
             margin-right: -#{$space-d/2};
         }
         margin: 0 -#{$space-d/2};
