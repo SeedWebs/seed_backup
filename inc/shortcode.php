@@ -11,6 +11,7 @@ function s_loop_shortcode($atts) {
 	$atts = shortcode_atts(
 		array(
 			'author'                => '',
+			'author_name'			=> '',
 			'cat'              		=> '',
 			'category_name'         => '',
             'ignore_sticky_posts'   => false,
@@ -41,7 +42,8 @@ function s_loop_shortcode($atts) {
 		's_loop'
     );
     
-    $author                = sanitize_text_field( $atts['author'] );
+	$author                = sanitize_text_field( $atts['author'] );
+	$author_name           = sanitize_text_field( $atts['author_name'] );
 	$cat                   = sanitize_text_field( $atts['cat'] );
     $category_name         = sanitize_text_field( $atts['category_name'] );
     $exclude_current       = filter_var( $atts['exclude_current'], FILTER_VALIDATE_BOOLEAN );
@@ -120,6 +122,10 @@ function s_loop_shortcode($atts) {
     
     if ( ! empty( $author ) ) {
 		$args['author'] = $author;
+	}
+	
+	if ( ! empty( $author_name ) ) {
+		$args['author_name'] = $author_name;
     }
     
     if ( ! empty( $offset ) ) {
