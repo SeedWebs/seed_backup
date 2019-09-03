@@ -9,7 +9,7 @@ Font Name: IBM Plex Thai
         url("../fonts/ibm-plex/ibmplexthai-light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 @font-face {
     font-family: "IBM Plex Thai";
@@ -17,7 +17,7 @@ Font Name: IBM Plex Thai
         url("../fonts/ibm-plex/ibmplexthai-regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 @font-face {
     font-family: "IBM Plex Thai";
@@ -25,7 +25,7 @@ Font Name: IBM Plex Thai
         url("../fonts/ibm-plex/ibmplexthai-medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 @font-face {
     font-family: "IBM Plex Thai";
@@ -33,7 +33,7 @@ Font Name: IBM Plex Thai
         url("../fonts/ibm-plex/ibmplexthai-bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 
 /*
@@ -45,7 +45,7 @@ Font Name: Maledpan
         url("../fonts/maledpan/maledpan.woff") format("woff");
     font-weight: normal;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 @font-face {
     font-family: "Maledpan";
@@ -53,7 +53,7 @@ Font Name: Maledpan
         url("../fonts/maledpan/maledpan-bold.woff") format("woff");
     font-weight: bold;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 
 /*
@@ -62,29 +62,29 @@ font name: Sarabun
 
 @font-face {
     font-family: "Sarabun";
-    font-display: auto;
     src: local("Sarabun"), url("../fonts/sarabun/sarabun.woff2") format("woff2"),
         url("../fonts/sarabun/sarabun.woff") format("woff");
     font-weight: 400;
     font-style: normal;
+    font-display: fallback;
 }
 @font-face {
     font-family: "Sarabun";
-    font-display: auto;
     src: local("Sarabun"),
         url("../fonts/sarabun/sarabun-medium.woff2") format("woff2"),
         url("../fonts/sarabun/sarabun-medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
+    font-display: fallback;
 }
 @font-face {
     font-family: "Sarabun";
-    font-display: auto;
     src: local("Sarabun"),
         url("../fonts/sarabun/sarabun-bold.woff2") format("woff2"),
         url("../fonts/sarabun/sarabun-bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
+    font-display: fallback;
 }
 
 /*
@@ -93,12 +93,12 @@ font name: Seed-Icons
 
 @font-face {
     font-family: "seed-icons";
-    font-display: auto;
     src: local("seed-icons"),
         url("../fonts/seed-icons/seed-icons.woff2?seed") format("woff2"),
         url("../fonts/seed-icons/seed-icons.woff?seed") format("woff");
     font-weight: normal;
     font-style: normal;
+    font-display: fallback;
 }
 
 [class^="si-"],
