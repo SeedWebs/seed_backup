@@ -240,7 +240,6 @@ function seed_banner_title($post_id) {
 		$banner_bg .= '></div>';	
 	}
 
-	
     $permalink = get_the_permalink($post_id);
     $breadcrumb = '';
 
@@ -251,14 +250,18 @@ function seed_banner_title($post_id) {
     if(is_front_page()) {
         $title = get_bloginfo( 'name' ) . '<small>' . get_bloginfo( 'description' ) . '</small>';
 		$breadcrumb = '';
-	} elseif (is_shop()) {
-		$title = get_the_title($post_id);
-    } elseif (is_archive()) {
+	} elseif (is_archive()) {
         $title = get_the_archive_title($post_id);
     } elseif (is_404()) {
         $title = __('Page not found', 'seed');
     } else {
         $title = get_the_title($post_id);
+	}
+	
+	if ( function_exists('is_shop') ) { 
+        if (is_shop()) {
+			$title = get_the_title($post_id);
+		}
     }
 	
     $output = '<div class="main-header -' . $banner_class . '">'
