@@ -149,13 +149,13 @@ function seed_logo() {
 }
 
 /**
- * Output Title (h1/h2)
+ * Output Title (h1/p)
  */
 function seed_title() {
 	if ( is_front_page() && is_home() ) {
 		$tag = 'h1';
 	} else {
-		$tag = 'h2';
+		$tag = 'p';
 	}
     echo '<' . $tag . ' class="site-title"><a href="' . esc_url( home_url( '/' ) ) .'" rel="home">' . get_bloginfo( 'name' ) . '</a></' . $tag. '>';
 }
