@@ -15,7 +15,7 @@
             <?php
                 $category = get_the_category();
                 if ( $category[0] ) {
-                   echo '<h5 class="cat"><a href="' . get_category_link( $category[0]->term_id ) . '">' . $category[0]->cat_name . '</a></h5>';
+                   echo '<p class="cat _heading"><a href="' . get_category_link( $category[0]->term_id ) . '">' . $category[0]->cat_name . '</a></p>';
                 }
             ?>
             <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>

@@ -1,32 +1,15 @@
 <?php 
 get_header(); 
-$banner_id = get_the_ID();
-if(!is_front_page()): // Show Shop title
+
+if(!is_front_page()) {
 	$shop_page_id = get_option( 'woocommerce_shop_page_id' ); 
-	global $wp; 
 	if(is_shop()) {
-		$link = '<a href="' . esc_url( get_permalink( $shop_page_id )) . '">' . get_the_title( $shop_page_id ) . '</a>';
-		$banner_id = $shop_page_id;
-	} elseif(is_archive()) {
-		$link = '<a href="' . home_url( $wp->request ) . '">' . get_the_archive_title() . '</a>';
+		seed_banner_title($shop_page_id);
 	} else {
-		$link = '<a href="' . esc_url( get_permalink()) . '">' . get_the_title() . '</a>';
-	}
+		seed_banner_title(get_the_ID());
+	} 
+}
 ?>
-
-
-<div class="main-header -<?php seed_banner_class(get_the_ID()); ?>">
-    <?php seed_banner_bg($banner_id); ?>
-    <div class="s-container">
-        <div class="main-title">
-            <h2><?php echo $link; ?></h2>
-            <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb( '<h4 id="breadcrumbs">','</h4>' );}?>
-        </div>
-    </div>
-</div>
-
-
-<?php endif; ?>
 
 <div class="s-container main-body <?php if($GLOBALS['s_shop_layout'] != 'full-width') echo '-shopbar'; ?>">
     <div id="primary" class="content-area">

@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<h1 class="hide">Seed Demo - ตัวอย่างการเขียนโค้ด</h1>
+
 <?php 
 /* Example of using wp_query - https://codex.wordpress.org/Class_Reference/WP_Query */ 
 /*

@@ -8,15 +8,8 @@
  */
 get_header();?>
 
-<div class="main-header -<?php seed_banner_class(get_the_ID()); ?>">
-    <?php seed_banner_bg(get_the_ID()); ?>
-    <div class="s-container">
-        <div class="main-title">
-            <h2><?php esc_html_e('Page not found', 'seed');?></h2>
-            <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb( '<h4 id="breadcrumbs">','</h4>' );}?>
-        </div>
-    </div>
-</div>
+
+<?php seed_banner_title(get_the_ID()); ?>
 
 <div class="s-container main-body">
     <div id="primary" class="content-area">
@@ -29,7 +22,7 @@ get_header();?>
 
                 <div class="page-content">
                     <p><?php esc_html_e('It looks like nothing was found at this location.', 'seed');?></p>
-                    <?php get_search_form();?>
+                    <?php get_search_form(); ?>
                 </div>
             </section>
 

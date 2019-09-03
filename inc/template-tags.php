@@ -189,42 +189,31 @@ if($GLOBALS['s_member_url'] != 'none'): ?>
 <?php endif; 
 }
 
-
 /*
- * Output CSS Class in .main-header
+ * Output Main Header with Title
 */
-function seed_banner_class($post_id) {
-	$banner_class = $GLOBALS['s_title_style'];
+function seed_banner_title($post_id) {
 
+	// Banner Class
+	$banner_class = $GLOBALS['s_title_style'];
 	if (function_exists('get_field')) {
 		if(get_field( 'title_style', $post_id )) {
 			$banner_class = get_field( 'title_style', $post_id );
 		}
 	}
-	
-	echo $banner_class;
-}
 
-/*
- * Output Banner Div in .main-header
-*/
-function seed_banner_bg($post_id) {
-
+	// Banner BG
 	$title_style = $GLOBALS['s_title_style'];
-	$div_bg ='';
-
+	$banner_bg = '';
 	if (function_exists('get_field')) {
 		if(get_field( 'title_style', $post_id )) {
 			$title_style = get_field( 'title_style', $post_id );
 		}
 	}
-
 	if($title_style == 'banner') {
-
 		$img_banner =  '';
 		$img_banner_blur = '';
 		$img_banner_opacity = '';
-
 		if (function_exists('get_field')) {
 			$img_banner = get_field( 'banner', $post_id );
 			$img_banner_blur = get_field( 'banner_blur', $post_id );
@@ -248,20 +237,54 @@ function seed_banner_bg($post_id) {
 		} else {
 			$banner_bg .= ' -blank"';
 		}
-		$banner_bg .= '></div>';
-		echo $banner_bg;
-	} 
+		$banner_bg .= '></div>';	
+	}
+
+	
+    $permalink = get_the_permalink($post_id);
+    $breadcrumb = '';
+
+    if ( function_exists('yoast_breadcrumb') ) { 
+        $breadcrumb = yoast_breadcrumb( '<div id="breadcrumbs" class="bc">','</div>', false);    
+    }
+
+    if(is_front_page()) {
+        $title = get_bloginfo( 'name' ) . '<small>' . get_bloginfo( 'description' ) . '</small>';
+		$breadcrumb = '';
+	} elseif (is_shop()) {
+		$title = get_the_title($post_id);
+    } elseif (is_archive()) {
+        $title = get_the_archive_title($post_id);
+    } elseif (is_404()) {
+        $title = __('Page not found', 'seed');
+    } else {
+        $title = get_the_title($post_id);
+    }
+	
+    $output = '<div class="main-header -' . $banner_class . '">'
+            . $banner_bg
+			. '<div class="s-container">'
+			. '<div class="main-title _heading">'
+            . '<div class="title"><a href="' . $permalink . '">' . $title .'</a></div>'
+            . $breadcrumb
+            . '</div></div></div>';
+
+    echo $output;
 }
+
+
+
 
 /*
  * Output Author Avatar & Profile in .content-item
 */
 function seed_author($author_id) {
-	echo '<a class="author" href="' . esc_url( get_author_posts_url($author_id) ) .'">';
-	echo get_avatar($author_id, 40);
-	echo '<div class="name">';
-	echo '<h3>' . get_the_author_meta('display_name', $author_id) . '</h3>';
-	echo '<small>' . get_the_date() . '</small>';
-	echo '</div>';
-	echo '</a>';
+	$output = '<a class="author" href="' . esc_url( get_author_posts_url($author_id) ) .'">'
+			. get_avatar($author_id, 40)
+			. '<div class="name">'
+			. '<h2>' . get_the_author_meta('display_name', $author_id) . '</h2>'
+			. '<small>' . get_the_date() . '</small>'
+			. '</div>'
+			. '</a>';
+	echo $output;
 }

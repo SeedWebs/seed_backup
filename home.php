@@ -1,23 +1,6 @@
 <?php get_header(); ?>
 
-<div class="main-header -banner <?php if($GLOBALS['s_title_style'] == 'minimal') {echo '-blank'; } ?>">
-    <?php seed_banner_bg(get_the_ID()); ?>
-    <div class="s-container">
-        <div class="main-title">
-            <h2>
-                <a href="<?php global $wp; echo home_url( $wp->request ) ?>">
-                    <?php 
-					if(is_front_page()) {
-						echo get_bloginfo( 'name' ) . '<small>' . get_bloginfo( 'description' ) . '</small>';
-					} else {
-						single_post_title();
-					} ?>
-                </a>
-            </h2>
-            <?php if ( function_exists('yoast_breadcrumb') && !is_front_page()) { yoast_breadcrumb( '<h4 id="breadcrumbs">','</h4>' );}?>
-        </div>
-    </div>
-</div>
+<?php seed_banner_title(get_the_ID()); ?>
 
 <div class="s-container main-body <?php echo '-'.$GLOBALS['s_blog_layout']; ?>">
     <div id="primary" class="content-area">
