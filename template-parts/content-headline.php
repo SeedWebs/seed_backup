@@ -9,7 +9,7 @@ HEADLINE STYLE
 2 : Title on bright banner
 3 : Banner image only
 */
-$headline_style = "1";
+$headline_style = '';
 $headline_title    = '';
 $headline_subtitle = '';
 $banner_style      = '';
@@ -30,6 +30,8 @@ switch ($headline_style) {
         break;
     case "3":
         $banner_style = '-bright -notitle';
+        break;
+    default:
         break;
 }
 

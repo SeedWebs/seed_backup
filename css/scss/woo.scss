@@ -2,10 +2,41 @@
 /* == WOOCOMMERCE == */
 @import "variables";
 
+.button {
+    display: inline-block;
+    align-items: center;
+    padding: 6px 20px;
+    color: $button-text;
+    background-color: $button-bg;
+    border-radius: $button-border-radius;
+    border: none;
+    text-align: center;
+    &:hover {
+        color: $button-hover-text;
+        background-color: $button-hover-bg;
+    }
+}
+
 #page .button.alt {
     background-color: $button-bg;
 }
+/* CONTENT PRODUCT */
 
+.content-item.-product {
+    &.-card {
+        .add_to_cart_button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .added_to_cart {
+            position: absolute;
+            bottom: 25px;
+            right: 20px;
+        }
+    }
+}
 /* BREADCRUMB */
 .post-type-archive-product .woocommerce-breadcrumb,
 .post-type-archive-product .site-main > .page-title {
