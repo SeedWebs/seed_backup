@@ -41,13 +41,21 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
-	"/_acf-field-groups.json": {
+	"/acf-json/group_5d1a01feea33c.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/_acf-field-groups-min.json",
+		"oAP": "/acf-json/group_5d1a01feea33c-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"/acf-json/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/acf-json/index.php",
+		"oF": 0
 		},
 	"/archive.php": {
 		"cB": 0,
@@ -871,6 +879,14 @@
 		"oAP": "/inc/jetpack.php",
 		"oF": 0
 		},
+	"/inc/shortcode.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/inc/shortcode.php",
+		"oF": 0
+		},
 	"/inc/template-tags.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1126,6 +1142,14 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/template-parts/content-card.php",
+		"oF": 0
+		},
+	"/template-parts/content-headline.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/template-parts/content-headline.php",
 		"oF": 0
 		},
 	"/template-parts/content-hero.php": {

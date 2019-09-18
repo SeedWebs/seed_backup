@@ -305,11 +305,12 @@ dl {
     margin-top: 0;
     margin-bottom: 1em;
 }
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-    margin-bottom: 0;
+ol,
+ul {
+    ol,
+    ul {
+        margin-bottom: 0;
+    }
 }
 dt {
     font-weight: 700;
@@ -328,7 +329,7 @@ a {
     }
 }
 
-/* == RESET == */
+/* == INI == */
 hr {
     height: 1px;
     border: 0;
@@ -368,8 +369,7 @@ h4 {
     }
 }
 form,
-.clearfix,
-.container {
+.clearfix {
     &:before,
     &:after {
         content: "";
@@ -378,11 +378,6 @@ form,
     &:after {
         clear: both;
     }
-}
-.container .container {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
 }
 button:focus,
 input:focus,
@@ -458,11 +453,20 @@ blockquote {
         font-size: 0.8em;
     }
 }
-
-/* == SEED ==*/
 .text-center {
     text-align: center;
+    @media (min-width: 992px) {
+        .-toleft {
+            text-align: left;
+        }
+        .-toright {
+            text-align: right;
+        }
+    }
 }
+
+/* == SEED ==*/
+
 .s-container {
     margin-right: auto;
     margin-left: auto;
