@@ -44,6 +44,9 @@
                 </nav>
                 <?php endif; ?>
 
+                <a class="site-search s-modal-trigger m-user" onclick="return false;"
+                    data-popup-trigger="site-search"><i class="si-search"></i></a>
+
                 <?php seed_member_menu() ?>
 
                 <?php if (is_active_sidebar( 'action' )) : ?>
@@ -57,6 +60,11 @@
                 </div>
             </nav>
         </header>
+
+        <div class="s-modal -full" data-s-modal="site-search">
+            <span class="s-modal-close"><i class="si-cross"></i></span>
+            <?php get_search_form(); ?>
+        </div>
 
         <div class="site-header-space"></div>
 
