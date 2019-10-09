@@ -51,6 +51,7 @@ if (sliders) {
                 contain: true,
                 wrapAround: true,
                 imagesLoaded: true,
+                dragThreshold: 1,
                 watchCSS: true
             });
         } else {
@@ -58,8 +59,40 @@ if (sliders) {
                 cellAlign: "left",
                 contain: true,
                 wrapAround: true,
-                imagesLoaded: true
+                imagesLoaded: true,
+                dragThreshold: 1
             });
         }
     }
 }
+// Fix iOS13 flickity performance - https://gist.github.com/bakura10/b0647ef412eb7757fa6f0d2c74c1f145
+(function() {
+    let touchingCarousel = false,
+        touchStartCoords;
+    document.body.addEventListener("touchstart", function(e) {
+        if (e.target.closest(".flickity-slider")) {
+            touchingCarousel = true;
+        } else {
+            touchingCarousel = false;
+            return;
+        }
+        touchStartCoords = {
+            x: e.touches[0].pageX,
+            y: e.touches[0].pageY
+        };
+    });
+    document.body.addEventListener(
+        "touchmove",
+        function(e) {
+            if (!(touchingCarousel && e.cancelable)) {
+                return;
+            }
+            let moveVector = {
+                x: e.touches[0].pageX - touchStartCoords.x,
+                y: e.touches[0].pageY - touchStartCoords.y
+            };
+            if (Math.abs(moveVector.x) > 1) e.preventDefault();
+        },
+        { passive: false }
+    );
+})();
