@@ -137,7 +137,7 @@
                 "3": "Banner image only"
             },
             "default_value": [
-                1
+                3
             ],
             "allow_null": 0,
             "multiple": 0,
@@ -223,7 +223,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": 1,
     "description": "",
-    "modified": 1567344626
+    "modified": 1571501078
 }
