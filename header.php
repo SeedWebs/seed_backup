@@ -28,9 +28,7 @@
                     <?php seed_title(); ?>
                 </div>
 
-                <a class="site-toggle">
-                    <i><span></span><span></span><span></span><span></span></i><b>Menu</b>
-                </a>
+                <div class="site-toggle"><b></b></div>
 
                 <?php if (is_active_sidebar( 'headbar_m' )): ?>
                 <div id="headbar_m" class="_mobile"><?php dynamic_sidebar( 'headbar_m' ); ?></div>
@@ -45,7 +43,7 @@
                 <?php endif; ?>
 
                 <a class="site-search s-modal-trigger m-user" onclick="return false;"
-                    data-popup-trigger="site-search"><i class="si-search"></i></a>
+                    data-popup-trigger="site-search"><i class="si-search-o"></i></a>
 
                 <?php seed_member_menu() ?>
 
@@ -62,7 +60,7 @@
         </header>
 
         <div class="s-modal -full" data-s-modal="site-search">
-            <span class="s-modal-close"><i class="si-cross"></i></span>
+            <span class="s-modal-close"><i class="si-cross-o"></i></span>
             <?php get_search_form(); ?>
         </div>
 
