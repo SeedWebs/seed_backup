@@ -41,6 +41,14 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
+	"/acf-json/group_5d1a01feea33c.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/group_5d1a01feea33c-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/acf-json/index.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -48,14 +56,6 @@
 		"oA": 2,
 		"oAP": "/acf-json/index.php",
 		"oF": 0
-		},
-	"/acf-json/title.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/acf-json/title-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
 		},
 	"/archive.php": {
 		"cB": 0,
@@ -162,7 +162,7 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/css/desktop.css",
-		"oF": 3,
+		"oF": 2,
 		"oS": 2,
 		"uL": 1
 		},
@@ -175,7 +175,7 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/css/mobile.css",
-		"oF": 3,
+		"oF": 2,
 		"oS": 2,
 		"uL": 1
 		},
@@ -188,7 +188,7 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/css/woo.css",
-		"oF": 3,
+		"oF": 2,
 		"oS": 2,
 		"uL": 1
 		},
@@ -3256,7 +3256,7 @@
 		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSASS": {
-		"autoOutputAction": 1,
+		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
 		"autoOutputPathRelativePath": "../",
 		"autoOutputPathReplace1": "sass",
