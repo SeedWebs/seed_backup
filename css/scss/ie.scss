@@ -1,0 +1,64 @@
+// out: ../ie.css, compress: true, sourceMap: false, autoprefixer: last 5 versions, groupmedia: true
+@import "variables";
+
+// IE 10 and above
+.s-grid {
+  display: block;
+  margin-left: -$space-d / 2;
+  margin-right: -$space-d / 2;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  > div,
+  > article {
+    float: left;
+    margin: 0 #{$space-d / 2} $space-d;
+  }
+  &.-d2 {
+    > div,
+    > article {
+      width: calc(50% - #{$space-d});
+      &:nth-of-type(2n + 1) {
+        clear: left;
+      }
+    }
+  }
+  &.-d3 {
+    > div,
+    > article {
+      width: calc(33.3333% - #{$space-d});
+      &:nth-of-type(3n + 1) {
+        clear: left;
+      }
+    }
+  }
+  &.-d4 {
+    > div,
+    > article {
+      width: calc(25% - #{$space-d});
+      &:nth-of-type(4n + 1) {
+        clear: left;
+      }
+    }
+  }
+  &.-d5 {
+    > div,
+    > article {
+      width: calc(20% - #{$space-d});
+      &:nth-of-type(5n + 1) {
+        clear: left;
+      }
+    }
+  }
+  &.-d6 {
+    > div,
+    > article {
+      width: calc(33.3333% - #{$space-d});
+      &:nth-of-type(6n + 1) {
+        clear: left;
+      }
+    }
+  }
+}
