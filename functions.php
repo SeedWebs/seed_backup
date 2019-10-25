@@ -196,6 +196,7 @@ function seed_scripts()
 
     wp_enqueue_style('s-mobile', get_theme_file_uri('/css/mobile.css'), array(), filemtime(get_theme_file_path('/css/mobile.css')));
     wp_enqueue_style('s-desktop', get_theme_file_uri('/css/desktop.css'), array(), filemtime(get_theme_file_path('/css/desktop.css')), '(min-width: 992px)');
+    wp_enqueue_style('s-ie', get_theme_file_uri('/css/ie.css'), array(), filemtime(get_theme_file_path('/css/ie.css')), '(-ms-high-contrast: none), (-ms-high-contrast: active)');
 
     if ($GLOBALS['s_style_css'] == 'enable') {
         wp_enqueue_style('s-style', get_stylesheet_uri());
