@@ -16,6 +16,14 @@ This repository does not include img and font folders. Then it will not work as 
 
 ## Change Log
 
+### 2.0.9
+
+- Date: 26 APR 2020
+- Tweak: Change reccomended SCSS extension to Live Sass Compiler by Ritwick Dey
+- Tweak: Example sftp setting for SFTP by liximomo extension.
+- Tweak: using \$box-padding in \_variables.scss
+- Fix: Search form in modal
+
 ### 2.0.8
 
 - Date: 25 OCT 2019

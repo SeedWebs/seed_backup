@@ -1,59 +1,51 @@
-// out: false
-
 /*
 Font Name: IBM Plex Thai
 */
 @font-face {
-    font-family: "IBM Plex Thai";
-    src: url("../fonts/ibm-plex/ibmplexthai-light.woff2") format("woff2"),
-        url("../fonts/ibm-plex/ibmplexthai-light.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "IBM Plex Thai";
+  src: url("../fonts/ibm-plex/ibmplexthai-light.woff2") format("woff2"), url("../fonts/ibm-plex/ibmplexthai-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-    font-family: "IBM Plex Thai";
-    src: url("../fonts/ibm-plex/ibmplexthai-regular.woff2") format("woff2"),
-        url("../fonts/ibm-plex/ibmplexthai-regular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "IBM Plex Thai";
+  src: url("../fonts/ibm-plex/ibmplexthai-regular.woff2") format("woff2"), url("../fonts/ibm-plex/ibmplexthai-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-    font-family: "IBM Plex Thai";
-    src: url("../fonts/ibm-plex/ibmplexthai-medium.woff2") format("woff2"),
-        url("../fonts/ibm-plex/ibmplexthai-medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "IBM Plex Thai";
+  src: url("../fonts/ibm-plex/ibmplexthai-medium.woff2") format("woff2"), url("../fonts/ibm-plex/ibmplexthai-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-    font-family: "IBM Plex Thai";
-    src: url("../fonts/ibm-plex/ibmplexthai-bold.woff2") format("woff2"),
-        url("../fonts/ibm-plex/ibmplexthai-bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: "IBM Plex Thai";
+  src: url("../fonts/ibm-plex/ibmplexthai-bold.woff2") format("woff2"), url("../fonts/ibm-plex/ibmplexthai-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 /*
 Font Name: Maledpan
 */
 @font-face {
-    font-family: "Maledpan";
-    src: url("../fonts/maledpan/maledpan.woff2") format("woff2"),
-        url("../fonts/maledpan/maledpan.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Maledpan";
+  src: url("../fonts/maledpan/maledpan.woff2") format("woff2"), url("../fonts/maledpan/maledpan.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-    font-family: "Maledpan";
-    src: url("../fonts/maledpan/maledpan-bold.woff2") format("woff2"),
-        url("../fonts/maledpan/maledpan-bold.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Maledpan";
+  src: url("../fonts/maledpan/maledpan-bold.woff2") format("woff2"), url("../fonts/maledpan/maledpan-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 /*
@@ -61,30 +53,25 @@ font name: Sarabun
 */
 
 @font-face {
-    font-family: "Sarabun";
-    src: local("Sarabun"), url("../fonts/sarabun/sarabun.woff2") format("woff2"),
-        url("../fonts/sarabun/sarabun.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: fallback;
+  font-family: "Sarabun";
+  src: local("Sarabun"), url("../fonts/sarabun/sarabun.woff2") format("woff2"), url("../fonts/sarabun/sarabun.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
 }
 @font-face {
-    font-family: "Sarabun";
-    src: local("Sarabun"),
-        url("../fonts/sarabun/sarabun-medium.woff2") format("woff2"),
-        url("../fonts/sarabun/sarabun-medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: fallback;
+  font-family: "Sarabun";
+  src: local("Sarabun"), url("../fonts/sarabun/sarabun-medium.woff2") format("woff2"), url("../fonts/sarabun/sarabun-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
 }
 @font-face {
-    font-family: "Sarabun";
-    src: local("Sarabun"),
-        url("../fonts/sarabun/sarabun-bold.woff2") format("woff2"),
-        url("../fonts/sarabun/sarabun-bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: fallback;
+  font-family: "Sarabun";
+  src: local("Sarabun"), url("../fonts/sarabun/sarabun-bold.woff2") format("woff2"), url("../fonts/sarabun/sarabun-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
 }
 
 /*
@@ -92,322 +79,320 @@ font name: Seed-Icons
 */
 
 @font-face {
-    font-family: "seed-icons";
-    src: local("seed-icons"),
-        url("../fonts/seed-icons/seed-icons.woff2?seed") format("woff2"),
-        url("../fonts/seed-icons/seed-icons.woff?seed") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
+  font-family: "seed-icons";
+  src: local("seed-icons"), url("../fonts/seed-icons/seed-icons.woff2?seed") format("woff2"), url("../fonts/seed-icons/seed-icons.woff?seed") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
 }
 
 [class^="si-"],
 [class*=" si-"] {
-    font-family: "seed-icons" !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: -0.06em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: "seed-icons" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.06em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .si-home:before {
-    content: "\e900";
+  content: "\e900";
 }
 .si-home-alt:before {
-    content: "\e901";
+  content: "\e901";
 }
 .si-menu:before {
-    content: "\e902";
+  content: "\e902";
 }
 .si-paper-clip:before {
-    content: "\e903";
+  content: "\e903";
 }
 .si-image:before {
-    content: "\e904";
+  content: "\e904";
 }
 .si-camera:before {
-    content: "\e905";
+  content: "\e905";
 }
 .si-video:before {
-    content: "\e906";
+  content: "\e906";
 }
 .si-paper:before {
-    content: "\e907";
+  content: "\e907";
 }
 .si-shuffle:before {
-    content: "\e908";
+  content: "\e908";
 }
 .si-repeat:before {
-    content: "\e909";
+  content: "\e909";
 }
 .si-briefcase:before {
-    content: "\e90a";
+  content: "\e90a";
 }
 .si-box:before {
-    content: "\e90b";
+  content: "\e90b";
 }
 .si-share:before {
-    content: "\e90c";
+  content: "\e90c";
 }
 .si-trash:before {
-    content: "\e90d";
+  content: "\e90d";
 }
 .si-pencil-o:before {
-    content: "\e90e";
+  content: "\e90e";
 }
 .si-pencil:before {
-    content: "\e90f";
+  content: "\e90f";
 }
 .si-play:before {
-    content: "\e910";
+  content: "\e910";
 }
 .si-play-o:before {
-    content: "\e911";
+  content: "\e911";
 }
 .si-zoom-in:before {
-    content: "\e912";
+  content: "\e912";
 }
 .si-zoom-out:before {
-    content: "\e913";
+  content: "\e913";
 }
 .si-search-o:before {
-    content: "\e914";
+  content: "\e914";
 }
 .si-search:before {
-    content: "\e915";
+  content: "\e915";
 }
 .si-basket:before {
-    content: "\e916";
+  content: "\e916";
 }
 .si-basket-alt:before {
-    content: "\e917";
+  content: "\e917";
 }
 .si-cart:before {
-    content: "\e918";
+  content: "\e918";
 }
 .si-cart-alt:before {
-    content: "\e919";
+  content: "\e919";
 }
 .si-cart-o:before {
-    content: "\e91a";
+  content: "\e91a";
 }
 .si-bag-alt:before {
-    content: "\e94a";
+  content: "\e94a";
 }
 .si-bag:before {
-    content: "\e91b";
+  content: "\e91b";
 }
 .si-globe:before {
-    content: "\e91c";
+  content: "\e91c";
 }
 .si-location:before {
-    content: "\e91d";
+  content: "\e91d";
 }
 .si-mail:before {
-    content: "\e91e";
+  content: "\e91e";
 }
 .si-phone:before {
-    content: "\e91f";
+  content: "\e91f";
 }
 .si-phone-o:before {
-    content: "\e920";
+  content: "\e920";
 }
 .si-phone-alt:before {
-    content: "\e921";
+  content: "\e921";
 }
 .si-mobile:before {
-    content: "\e922";
+  content: "\e922";
 }
 .si-fax:before {
-    content: "\e923";
+  content: "\e923";
 }
 .si-fax-o:before {
-    content: "\e924";
+  content: "\e924";
 }
 .si-calendar:before {
-    content: "\e960";
+  content: "\e960";
 }
 .si-calendar-alt:before {
-    content: "\e925";
+  content: "\e925";
 }
 .si-clock:before {
-    content: "\e926";
+  content: "\e926";
 }
 .si-user:before {
-    content: "\e927";
+  content: "\e927";
 }
 .si-folder:before {
-    content: "\e928";
+  content: "\e928";
 }
 .si-tag:before {
-    content: "\e929";
+  content: "\e929";
 }
 .si-comment:before {
-    content: "\e92a";
+  content: "\e92a";
 }
 .si-upload:before {
-    content: "\e92b";
+  content: "\e92b";
 }
 .si-download:before {
-    content: "\e92c";
+  content: "\e92c";
 }
 .si-plus:before {
-    content: "\e92d";
+  content: "\e92d";
 }
 .si-minus:before {
-    content: "\e92e";
+  content: "\e92e";
 }
 .si-arrow-left:before {
-    content: "\e92f";
+  content: "\e92f";
 }
 .si-arrow-right:before {
-    content: "\e930";
+  content: "\e930";
 }
 .si-arrow-up:before {
-    content: "\e931";
+  content: "\e931";
 }
 .si-arrow-down:before {
-    content: "\e932";
+  content: "\e932";
 }
 .si-check-o:before {
-    content: "\e933";
+  content: "\e933";
 }
 .si-cross-o:before {
-    content: "\e934";
+  content: "\e934";
 }
 .si-check:before {
-    content: "\e95b";
+  content: "\e95b";
 }
 .si-cross:before {
-    content: "\e95c";
+  content: "\e95c";
 }
 .si-dashboard:before {
-    content: "\e95d";
+  content: "\e95d";
 }
 .si-ellipsis:before {
-    content: "\e935";
+  content: "\e935";
 }
 .si-chevron-left:before {
-    content: "\e936";
+  content: "\e936";
 }
 .si-chevron-right:before {
-    content: "\e937";
+  content: "\e937";
 }
 .si-chevron-down:before {
-    content: "\e938";
+  content: "\e938";
 }
 .si-chevron-up:before {
-    content: "\e939";
+  content: "\e939";
 }
 .si-caret-left:before {
-    content: "\e93a";
+  content: "\e93a";
 }
 .si-caret-right:before {
-    content: "\e93b";
+  content: "\e93b";
 }
 .si-caret-down:before {
-    content: "\e93c";
+  content: "\e93c";
 }
 .si-caret-up:before {
-    content: "\e93d";
+  content: "\e93d";
 }
 .si-angle-left:before {
-    content: "\e93e";
+  content: "\e93e";
 }
 .si-angle-right:before {
-    content: "\e93f";
+  content: "\e93f";
 }
 .si-angle-up:before {
-    content: "\e940";
+  content: "\e940";
 }
 .si-angle-down:before {
-    content: "\e941";
+  content: "\e941";
 }
 .si-eye:before {
-    content: "\e942";
+  content: "\e942";
 }
 .si-qrcode:before {
-    content: "\e943";
+  content: "\e943";
 }
 .si-barcode:before {
-    content: "\e944";
+  content: "\e944";
 }
 .si-ampersand:before {
-    content: "\e945";
+  content: "\e945";
 }
 .si-cog:before {
-    content: "\e946";
+  content: "\e946";
 }
 .si-book:before {
-    content: "\e947";
+  content: "\e947";
 }
 .si-info:before {
-    content: "\e948";
+  content: "\e948";
 }
 .si-info-o:before {
-    content: "\e949";
+  content: "\e949";
 }
 .si-file:before {
-    content: "\e95e";
+  content: "\e95e";
 }
 .si-file-pdf:before {
-    content: "\e94b";
+  content: "\e94b";
 }
 .si-facebook:before {
-    content: "\e94c";
+  content: "\e94c";
 }
 .si-facebook-circled:before {
-    content: "\e94d";
+  content: "\e94d";
 }
 .si-facebook-squared:before {
-    content: "\e94e";
+  content: "\e94e";
 }
 .si-twitter:before {
-    content: "\e94f";
+  content: "\e94f";
 }
 .si-twitter-circled:before {
-    content: "\e950";
+  content: "\e950";
 }
 .si-line:before {
-    content: "\e951";
+  content: "\e951";
 }
 .si-line-circle:before {
-    content: "\e952";
+  content: "\e952";
 }
 .si-line-square:before {
-    content: "\e953";
+  content: "\e953";
 }
 .si-vimeo:before {
-    content: "\e954";
+  content: "\e954";
 }
 .si-vimeo-circle:before {
-    content: "\e955";
+  content: "\e955";
 }
 .si-instagram:before {
-    content: "\e956";
+  content: "\e956";
 }
 .si-instagram-circled:before {
-    content: "\e961";
+  content: "\e961";
 }
 .si-youtube:before {
-    content: "\e957";
+  content: "\e957";
 }
 .si-youtube-circle:before {
-    content: "\e958";
+  content: "\e958";
 }
 .si-pinterest:before {
-    content: "\e959";
+  content: "\e959";
 }
 .si-pinterest-circled:before {
-    content: "\e962";
+  content: "\e962";
 }
 .si-google-logo:before {
-    content: "\e95a";
+  content: "\e95a";
 }
 .si-facebook-logo:before {
-    content: "\e95f";
+  content: "\e95f";
 }

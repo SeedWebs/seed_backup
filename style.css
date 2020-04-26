@@ -4,7 +4,7 @@ Theme URI: https://th.seedthemes.com/item/seed/
 Author: SeedThemes
 Author URI: https://SeedThemes.com
 Description: Starter Theme
-Version: 2.0.7
+Version: 2.0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: seed
@@ -20,6 +20,12 @@ This theme use SCSS, please check
 2. css/scss/mobile.scss - will be compiled to css/mobile.css and used for mobile version.
 3. css/scss/desktop.scss - will be compiled to css/desktop.css and used for desktop version.
 4. If you set $GLOBALS['s_style_css'] in functions.php to 'enable', you can add CSS to this file to override all CSS.
+
+Recommended Text Editor: VS Code with these extensions, 
+1. Live Sass Compiler by Ritwick Dey
+2. SFTP by liximomo
+3. Prettier by Esben Petersen
+4. Format HTML in PHP by rifi2k
     
 =========================================== 
 */
