@@ -631,6 +631,7 @@
   position: relative;
   a {
     color: $slider-text;
+    display: block;
   }
   &.-bright {
     .pic {
@@ -776,6 +777,7 @@ body.page-template-page-form .site-content {
 
 /* SINGLE */
 .single-area {
+  line-height: 1.8;
   > .content-area {
     max-width: 750px;
     margin: 0 auto;

@@ -27,6 +27,7 @@ if (!isset($GLOBALS['s_title_style']))          {$GLOBALS['s_title_style']      
 /* ADD-ON */
 if (!isset($GLOBALS['s_member_url']))           {$GLOBALS['s_member_url']           = 'none';}          // none, url path such as: /my-account/
 if (!isset($GLOBALS['s_member_label']))         {$GLOBALS['s_member_label']         = 'Member';}        // ex: Member, สมาชิก
+if (!isset($GLOBALS['s_keen_slider']))          {$GLOBALS['s_keen_slider']          = 'enable';}        // disable, enable
 if (!isset($GLOBALS['s_style_css']))            {$GLOBALS['s_style_css']            = 'disable';}       // disable, enable
 if (!isset($GLOBALS['s_jquery']))               {$GLOBALS['s_jquery']               = 'disable';}       // disable, enable
 if (!isset($GLOBALS['s_fontawesome']))          {$GLOBALS['s_fontawesome']          = 'disable';}       // disable, enable
@@ -213,6 +214,11 @@ function seed_scripts()
     }
 
     wp_enqueue_script('s-scripts', get_theme_file_uri('/js/scripts.js'), array(), false, true);
+    
+    if ($GLOBALS['s_keen_slider'] == 'enable') {
+        wp_enqueue_script('s-slider', get_theme_file_uri('/js/keen-slider.js'), array(), false, true);
+    }
+    
     wp_enqueue_script('s-vanilla', get_theme_file_uri('/js/main-vanilla.js'), array(), false, true);
 
     if ($GLOBALS['s_jquery'] == 'enable') {

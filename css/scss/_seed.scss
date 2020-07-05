@@ -73,7 +73,10 @@ a.s-button {
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
 }
-
+.s-sec {
+  padding-top: calc(var(--s-space) * 2);
+  padding-bottom: calc(var(--s-space) * 2);
+}
 .s-title {
   text-align: center;
   margin-bottom: var(--s-space);
@@ -117,15 +120,44 @@ a.s-button {
   }
 }
 
+/* Keen Slider */
 .s-slider {
-  margin: 0 -#{$space-m/2};
-  height: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+
+  > .slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  &[data-keen-slider-v] {
+    flex-wrap: wrap;
+  }
+
+  &[data-keen-slider-v] > .slider {
+    width: 100%;
+  }
+
+  &[data-keen-slider-moves] * {
+    pointer-events: none;
+  }
+}
+
+.s-slider {
+  margin: 0 calc(var(--s-space) / -2) var(--s-space);
   &.-large {
-    margin-left: -$space-m;
-    margin-right: -$space-m;
-    .slider {
-      padding-left: 0;
-      padding-right: 0;
+    margin: 0 calc(var(--s-space) * -1);
+    > .slider {
+      padding: 0;
     }
     @media (min-width: 992px) {
       margin-left: 0;
@@ -133,11 +165,9 @@ a.s-button {
     }
   }
   &.-full {
-    margin-left: -$space-m;
-    margin-right: -$space-m;
-    .slider {
-      padding-left: 0;
-      padding-right: 0;
+    margin: 0 calc(var(--s-space) * -1);
+    > .slider {
+      padding: 0;
     }
     @media (min-width: 768px) {
       margin-left: calc(50% - 50vw);
@@ -145,43 +175,16 @@ a.s-button {
     }
   }
   &.-dots-in {
-    .flickity-page-dots {
-      bottom: 10px;
-      .dot {
-        background: #fff;
-        opacity: 0.5;
-        &.is-selected {
-          opacity: 1;
-        }
-      }
-      @media (min-width: 768px) {
-        bottom: 15px;
-      }
-    }
-    .flickity-prev-next-button {
-      color: #fff;
-      @media (min-width: 768px) {
-        &.previous {
-          left: 20px;
-        }
-        &.next {
-          right: 20px;
-        }
-      }
-    }
-    .slider {
-      padding-bottom: 0;
-    }
+    //
   }
-  .slider {
-    padding: 0 #{$space-m/2} $space-m;
-    width: 100%;
-    min-height: 100%;
-    position: relative;
-    display: table;
-    table-layout: fixed;
+  > .slider {
+    display: flex;
+    padding: 0 calc(var(--s-space) / 2) calc(var(--s-space) / 2);
+    > article {
+      flex: 1;
+    }
     .content-item {
-      display: table-cell;
+      flex: 1;
       &.-list {
         display: flex;
       }
@@ -191,69 +194,7 @@ a.s-button {
       }
     }
   }
-  &.-m1\.2 {
-    margin-right: -$space-m;
-    .slider {
-      width: 82%;
-    }
-  }
-  &.-m1\.4 {
-    margin-right: -$space-m;
-    .slider {
-      width: 71%;
-    }
-  }
-  &.-m2 {
-    .slider {
-      width: 50%;
-    }
-  }
-  &.-m3 {
-    .slider {
-      width: 33.333333%;
-    }
-  }
-  &.-togrid {
-    &:after {
-      content: "flickity";
-      display: none;
-    }
-  }
   @media (min-width: 992px) {
-    &.-m1\.2,
-    &.-m1\.4 {
-      margin-right: -#{$space-d/2};
-    }
-    margin: 0 -#{$space-d/2};
-    .slider {
-      padding: 0 #{$space-d/2} $space-d;
-      width: 100%;
-    }
-    &.-d2 {
-      .slider {
-        width: 50%;
-      }
-    }
-    &.-d3 {
-      .slider {
-        width: 33.333333%;
-      }
-    }
-    &.-d4 {
-      .slider {
-        width: 25%;
-      }
-    }
-    &.-d5 {
-      .slider {
-        width: 20%;
-      }
-    }
-    &.-d6 {
-      .slider {
-        width: 16.666666%;
-      }
-    }
     &.-togrid {
       display: grid;
       grid-gap: $space-d;
@@ -276,10 +217,7 @@ a.s-button {
       .slider {
         width: 100%;
         padding: 0;
-      }
-      &:after {
-        content: "";
-        clear: both;
+        max-width: 100% !important;
       }
     }
   }

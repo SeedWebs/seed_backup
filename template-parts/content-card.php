@@ -27,5 +27,5 @@
             <?php the_excerpt();?>
         </div>
     </div>
-    <?php seed_author(get_the_author_meta('ID'));?>
+    <?php // seed_author(get_the_author_meta('ID'));?>
 </article>

@@ -7,7 +7,7 @@
 		"uuidString": "1CFA4483-8BCC-4A2D-B1E7-3F80971AEC21"
 		}
 	],
-"creatorBuild": "32001",
+"creatorBuild": "32186",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
@@ -89,322 +89,97 @@
 		"oAP": "/comments.php",
 		"oF": 0
 		},
-	"/css/desktop.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/desktop-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/css/ie.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
+	"/css": {
+		"ft": 65536,
 		"oA": 1,
-		"oAP": "/css/ie-min.css",
-		"oF": 0,
-		"oS": 3
+		"oAP": "/build/css",
+		"oF": 0
 		},
-	"/css/mobile.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/mobile-min.css",
-		"oF": 0,
-		"oS": 3
+	"/fonts/anuphan/anuphan-bold.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/anuphan/anuphan-bold.woff",
+		"oF": 0
 		},
-	"/css/scss/_begin.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
+	"/fonts/anuphan/anuphan-bold.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/anuphan/anuphan-bold.woff2",
+		"oF": 0
+		},
+	"/fonts/anuphan/anuphan-medium.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/anuphan/anuphan-medium.woff",
+		"oF": 0
+		},
+	"/fonts/anuphan/anuphan-medium.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/anuphan/anuphan-medium.woff2",
+		"oF": 0
+		},
+	"/fonts/anuphan/anuphan.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/anuphan/anuphan.woff",
+		"oF": 0
+		},
+	"/fonts/anuphan/anuphan.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/anuphan/anuphan.woff2",
+		"oF": 0
+		},
+	"/fonts/chula/chulacharasnew-bold.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/chula/chulacharasnew-bold.woff",
+		"oF": 0
+		},
+	"/fonts/chula/chulacharasnew-bold.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/chula/chulacharasnew-bold.woff2",
+		"oF": 0
+		},
+	"/fonts/chula/chulacharasnew.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/chula/chulacharasnew.woff",
+		"oF": 0
+		},
+	"/fonts/chula/chulacharasnew.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/chula/chulacharasnew.woff2",
+		"oF": 0
+		},
+	"/fonts/fontawesome/css": {
+		"ft": 65536,
 		"oA": 1,
-		"oAP": "/css/_begin.css",
-		"oF": 0,
-		"oS": 2,
-		"uL": 1
-		},
-	"/css/scss/_etc.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/_etc.css",
-		"oF": 0,
-		"oS": 2,
-		"uL": 1
-		},
-	"/css/scss/_fonts.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/_fonts.css",
-		"oF": 0,
-		"oS": 2,
-		"uL": 1
-		},
-	"/css/scss/_seed.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/_seed.css",
-		"oF": 0,
-		"oS": 2,
-		"uL": 1
-		},
-	"/css/scss/_variables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/_variables.css",
-		"oF": 0,
-		"oS": 2,
-		"uL": 1
-		},
-	"/css/scss/desktop.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/desktop.css",
-		"oF": 2,
-		"oS": 2,
-		"uL": 1
-		},
-	"/css/scss/ie.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/ie.css",
-		"oF": 0,
-		"oS": 2,
-		"uL": 1
-		},
-	"/css/scss/mobile.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/mobile.css",
-		"oF": 2,
-		"oS": 2,
-		"uL": 1
-		},
-	"/css/scss/woo.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/woo.css",
-		"oF": 2,
-		"oS": 2,
-		"uL": 1
-		},
-	"/css/woo.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/woo-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/css/wp-admin.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/wp-admin-min.css",
-		"oF": 1,
-		"oS": 0
-		},
-	"/css/wp-gutenberg.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/wp-gutenberg-min.css",
-		"oF": 1,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/all.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/all-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/all.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/all.min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/brands.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/brands-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/brands.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/brands.min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/fontawesome.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/fontawesome-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/fontawesome.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/fontawesome.min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/regular.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/regular-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/regular.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/regular.min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/solid.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/solid-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/solid.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/solid.min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/svg-with-js.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/svg-with-js-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/svg-with-js.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/svg-with-js.min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/v4-shims.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/v4-shims-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/fonts/fontawesome/css/v4-shims.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/fonts/fontawesome/css/v4-shims.min-min.css",
-		"oF": 0,
-		"oS": 3
+		"oAP": "/build/fonts/fontawesome/css",
+		"oF": 0
 		},
 	"/fonts/fontawesome/webfonts/fa-brands-400.eot": {
 		"cB": 0,
@@ -532,78 +307,6 @@
 		"oAP": "/fonts/fontawesome/webfonts/fa-solid-900.woff2",
 		"oF": 0
 		},
-	"/fonts/ibm-plex/ibmplexthai-bold.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/ibm-plex/ibmplexthai-bold.woff",
-		"oF": 0
-		},
-	"/fonts/ibm-plex/ibmplexthai-bold.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/ibm-plex/ibmplexthai-bold.woff2",
-		"oF": 0
-		},
-	"/fonts/ibm-plex/ibmplexthai-light.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/ibm-plex/ibmplexthai-light.woff",
-		"oF": 0
-		},
-	"/fonts/ibm-plex/ibmplexthai-light.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/ibm-plex/ibmplexthai-light.woff2",
-		"oF": 0
-		},
-	"/fonts/ibm-plex/ibmplexthai-medium.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/ibm-plex/ibmplexthai-medium.woff",
-		"oF": 0
-		},
-	"/fonts/ibm-plex/ibmplexthai-medium.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/ibm-plex/ibmplexthai-medium.woff2",
-		"oF": 0
-		},
-	"/fonts/ibm-plex/ibmplexthai-regular.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/ibm-plex/ibmplexthai-regular.woff",
-		"oF": 0
-		},
-	"/fonts/ibm-plex/ibmplexthai-regular.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/ibm-plex/ibmplexthai-regular.woff2",
-		"oF": 0
-		},
-	"/fonts/ibm-plex/license.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/ibm-plex/license.txt",
-		"oF": 0
-		},
 	"/fonts/maledpan/maledpan-bold.woff": {
 		"cB": 0,
 		"ft": 8192,
@@ -634,134 +337,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/maledpan/maledpan.woff2",
-		"oF": 0
-		},
-	"/fonts/noto/notosans-bold.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosans-bold.woff",
-		"oF": 0
-		},
-	"/fonts/noto/notosans-bold.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosans-bold.woff2",
-		"oF": 0
-		},
-	"/fonts/noto/notosans-light.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosans-light.woff",
-		"oF": 0
-		},
-	"/fonts/noto/notosans-light.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosans-light.woff2",
-		"oF": 0
-		},
-	"/fonts/noto/notosans-medium.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosans-medium.woff",
-		"oF": 0
-		},
-	"/fonts/noto/notosans-medium.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosans-medium.woff2",
-		"oF": 0
-		},
-	"/fonts/noto/notosans-regular.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosans-regular.woff",
-		"oF": 0
-		},
-	"/fonts/noto/notosans-regular.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosans-regular.woff2",
-		"oF": 0
-		},
-	"/fonts/noto/notosansthai-bold.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosansthai-bold.woff",
-		"oF": 0
-		},
-	"/fonts/noto/notosansthai-bold.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosansthai-bold.woff2",
-		"oF": 0
-		},
-	"/fonts/noto/notosansthai-light.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosansthai-light.woff",
-		"oF": 0
-		},
-	"/fonts/noto/notosansthai-light.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosansthai-light.woff2",
-		"oF": 0
-		},
-	"/fonts/noto/notosansthai-medium.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosansthai-medium.woff",
-		"oF": 0
-		},
-	"/fonts/noto/notosansthai-medium.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosansthai-medium.woff2",
-		"oF": 0
-		},
-	"/fonts/noto/notosansthai-regular.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosansthai-regular.woff",
-		"oF": 0
-		},
-	"/fonts/noto/notosansthai-regular.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/noto/notosansthai-regular.woff2",
 		"oF": 0
 		},
 	"/fonts/sarabun/sarabun-bold.woff": {
@@ -810,30 +385,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/sarabun/sarabun.woff2",
-		"oF": 0
-		},
-	"/fonts/seed-icons/seed-icons.ttf": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/seed-icons/seed-icons.ttf",
-		"oF": 0
-		},
-	"/fonts/seed-icons/seed-icons.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/seed-icons/seed-icons.woff",
-		"oF": 0
-		},
-	"/fonts/seed-icons/seed-icons.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/seed-icons/seed-icons.woff2",
 		"oF": 0
 		},
 	"/footer.php": {
@@ -955,60 +506,11 @@
 		"oAP": "/index.php",
 		"oF": 0
 		},
-	"/js/customizer.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
+	"/js": {
+		"ft": 65536,
 		"oA": 1,
-		"oAP": "/js/customizer-min.js",
-		"oF": 1,
-		"sC": 0,
-		"tS": 0
-		},
-	"/js/flickity.pkgd.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "/js/flickity.pkgd.min-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/js/main-jquery.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "/js/main.min.js",
-		"oF": 3,
-		"sC": 0,
-		"tS": 0
-		},
-	"/js/main-vanilla.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "/js/main-vanilla-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/js/scripts.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "/js/scripts-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
+		"oAP": "/build/js",
+		"oF": 0
 		},
 	"/page-seeddemo.php": {
 		"cB": 0,
@@ -1858,6 +1360,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"default-case-last": {
+			"active": 0,
+			"optionString": ""
+			},
 		"default-param-last": {
 			"active": 0,
 			"optionString": ""
@@ -2270,6 +1776,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-loss-of-precision": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-magic-numbers": {
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
@@ -2385,6 +1895,10 @@
 		"no-regex-spaces": {
 			"active": 1,
 			"optionString": ""
+			},
+		"no-restricted-exports": {
+			"active": 0,
+			"optionString": "{'restrictedNamedExports': []}"
 			},
 		"no-restricted-globals": {
 			"active": 0,
@@ -2529,6 +2043,10 @@
 		"no-use-before-define": {
 			"active": 0,
 			"optionString": "{'functions': true, 'classes': true, 'variables': true}"
+			},
+		"no-useless-backreference": {
+			"active": 0,
+			"optionString": ""
 			},
 		"no-useless-call": {
 			"active": 0,
@@ -3338,13 +2856,13 @@
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
+		"compilerType": 1,
 		"createSourceMap": 0,
-		"debugStyle": 0,
 		"decimalPrecision": 10,
+		"emitCharset": 1,
 		"outputStyle": 2,
 		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 1
+		"shouldRunBless": 0
 		},
 	"languageDefaultsSLIM": {
 		"autoOutputAction": 0,
@@ -3412,7 +2930,7 @@
 	"rollupExternals": "",
 	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
 	"rollupTreeshakingEnabled": 1,
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules",
+	"skippedFoldersString": "/storage/framework/sessions,node_modules,_logs,logs,log,_cache,cache,js,css",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,
