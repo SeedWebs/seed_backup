@@ -28,10 +28,10 @@ $box-border: 1px solid ;
 */
 
 //== FONTS
-$heading-font: "IBM Plex Thai", sans-serif; // Maledpan;
+$heading-font: "Anuphan", sans-serif; // Maledpan;
 $heading-font-weight: 500;
 $heading-line-height: 1.4;
-$body-font: "Sarabun", sans-serif;
+$body-font: "ChulaCharas-New", sans-serif;
 $body-font-size: 16px;
 $body-line-height: 1.625;
 
@@ -101,3 +101,30 @@ $footer-m-bg: $gray;
 $footer-m-text: rgba(255, 255, 255, 0.9);
 $footer-m-height: 40px;
 $footer-d-height: 50px;
+
+// CSS VARIABLES
+:root {
+  --s-accent: #0f6b4e;
+  --s-bg: #ffffff;
+  --s-text: #242d2e;
+  --s-light: #f8f9fa;
+  --s-line: #dcdfe5;
+  --s-noti: #c00;
+  --s-border: #7e8993;
+  --s-border-radius: 3px;
+  --s-btn-bg: var(--s-accent);
+  --s-btn-text: var(--s-bg);
+  --s-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  --s-box-padding: 15px;
+  --s-title: "Anuphan", sans-serif;
+  --s-title-weight: 500;
+  --s-title-line-height: 1.3;
+  --s-body: "ChulaCharas-New", sans-serif;
+  --s-body-line-height: 1.625;
+  --s-space: 16px;
+}
+@media (min-width: 768px) {
+  :root {
+    --s-space: 20px;
+  }
+}

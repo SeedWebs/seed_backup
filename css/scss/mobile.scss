@@ -125,7 +125,8 @@
       height: 0.2em;
       position: absolute;
       transform: rotate(0);
-      transition: top 0.3s 0.15s, left 0.1s, background-color 0.3s 0.2s, transform 0.2s;
+      transition: top 0.3s 0.15s, left 0.1s, background-color 0.3s 0.2s,
+        transform 0.2s;
     }
     & {
       left: 0;
@@ -149,7 +150,8 @@
       &,
       &:after,
       &:before {
-        transition: top 0.2s, left 0.2s, background-color 0.2s, transform 0.2s 0.15s;
+        transition: top 0.2s, left 0.2s, background-color 0.2s,
+          transform 0.2s 0.15s;
       }
 
       & {
@@ -485,23 +487,16 @@
     }
   }
   &.-card {
-    box-shadow: $box-shadow;
-    border-radius: $box-border-radius;
-    padding: $box-padding;
-    background: $box-bg;
-    padding-bottom: 65px;
+    box-shadow: var(--s-shadow);
+    border-radius: var(--s-border-radius);
+    padding: var(--s-box-padding);
     .pic {
-      margin: -#{$box-padding} -#{$box-padding} 15px;
-      border-radius: $box-border-radius $box-border-radius 0 0;
+      margin: calc(-1 * var(--s-box-padding)) calc(-1 * var(--s-box-padding))
+        var(--s-box-padding);
+      border-radius: var(--s-border-radius) var(--s-border-radius) 0 0;
       img {
-        border-radius: $box-border-radius $box-border-radius 0 0;
+        border-radius: var(--s-border-radius) var(--s-border-radius) 0 0;
       }
-    }
-    .author {
-      position: absolute;
-      bottom: $box-padding;
-      left: $box-padding;
-      right: $box-padding;
     }
   }
   &.-list {
