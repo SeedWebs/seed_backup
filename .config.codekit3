@@ -143,38 +143,6 @@
 		"oAP": "/fonts/anuphan/anuphan.woff2",
 		"oF": 0
 		},
-	"/fonts/chula/chulacharasnew-bold.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/chula/chulacharasnew-bold.woff",
-		"oF": 0
-		},
-	"/fonts/chula/chulacharasnew-bold.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/chula/chulacharasnew-bold.woff2",
-		"oF": 0
-		},
-	"/fonts/chula/chulacharasnew.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/chula/chulacharasnew.woff",
-		"oF": 0
-		},
-	"/fonts/chula/chulacharasnew.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/chula/chulacharasnew.woff2",
-		"oF": 0
-		},
 	"/fonts/fontawesome/css": {
 		"ft": 65536,
 		"oA": 1,
@@ -305,6 +273,38 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/fontawesome/webfonts/fa-solid-900.woff2",
+		"oF": 0
+		},
+	"/fonts/kmitl/kmitl-2020-bold.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/kmitl/kmitl-2020-bold.woff",
+		"oF": 0
+		},
+	"/fonts/kmitl/kmitl-2020-bold.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/kmitl/kmitl-2020-bold.woff2",
+		"oF": 0
+		},
+	"/fonts/kmitl/kmitl-2020.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/kmitl/kmitl-2020.woff",
+		"oF": 0
+		},
+	"/fonts/kmitl/kmitl-2020.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/kmitl/kmitl-2020.woff2",
 		"oF": 0
 		},
 	"/fonts/maledpan/maledpan-bold.woff": {
@@ -512,14 +512,6 @@
 		"oAP": "/build/js",
 		"oF": 0
 		},
-	"/page-seeddemo.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/page-seeddemo.php",
-		"oF": 0
-		},
 	"/page-templates/form.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -575,25 +567,6 @@
 		"oA": 2,
 		"oAP": "/page.php",
 		"oF": 0
-		},
-	"/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
 		},
 	"/rtl.css": {
 		"aP": 1,
