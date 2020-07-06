@@ -512,6 +512,14 @@
 		"oAP": "/build/js",
 		"oF": 0
 		},
+	"/page-seeddemo.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/page-seeddemo.php",
+		"oF": 0
+		},
 	"/page-templates/form.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -567,6 +575,25 @@
 		"oA": 2,
 		"oAP": "/page.php",
 		"oF": 0
+		},
+	"/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"/rtl.css": {
 		"aP": 1,
