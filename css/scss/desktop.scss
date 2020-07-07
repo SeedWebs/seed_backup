@@ -192,7 +192,7 @@ body.headbar-d {
 /* CONTENT ITEM */
 .content-item {
   &.-hero {
-    border-radius: $box-border-radius;
+    border-radius: var(--s-border-radius);
     overflow: hidden;
     display: grid;
     grid-template-columns: 73fr 38fr;

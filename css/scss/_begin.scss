@@ -262,9 +262,9 @@ h5,
 h6 {
   padding: 0;
   margin: 0 0 0.75rem;
-  font-family: var(--s-title);
-  font-weight: var(--s-title-weight);
-  line-height: var(--s-title-line-height);
+  font-family: var(--s-heading);
+  font-weight: var(--s-heading-weight);
+  line-height: var(--s-heading-line-height);
 }
 h1 {
   font-size: 1.75em;
@@ -291,8 +291,8 @@ button,
 .btn,
 .button,
 blockquote {
-  font-family: var(--s-title);
-  font-weight: var(--s-title-weight);
+  font-family: var(--s-heading);
+  font-weight: var(--s-heading-weight);
 }
 p {
   padding: 0;

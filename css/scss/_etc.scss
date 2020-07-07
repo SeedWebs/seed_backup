@@ -42,7 +42,7 @@
     padding-left: 0;
     text-align: center;
     margin: 0;
-    font-family: $heading-font;
+    font-family: var(--s-heading);
   }
 }
 .wp-block-table {
@@ -68,7 +68,7 @@
 p.has-drop-cap:not(:focus):first-letter {
   font-size: 5.4em;
   line-height: 0.9;
-  font-family: $heading-font;
+  font-family: var(--s-heading);
 }
 @media (min-width: 576px) {
   .alignfull,
@@ -354,7 +354,7 @@ body.home .gallery,
   height: 40px;
   max-width: 300px;
   background-color: #fff;
-  border: 1px solid $line;
+  border: 1px solid var(--s-border));
   border-radius: 3px;
   position: relative;
   > label {
@@ -373,7 +373,6 @@ body.home .gallery,
       right: 8px;
       top: 8px;
       z-index: 2;
-      color: $gray;
       font-size: 20px;
     }
   }

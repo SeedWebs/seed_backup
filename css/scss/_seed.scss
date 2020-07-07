@@ -51,8 +51,8 @@ a.s-button {
   line-height: 1;
   min-height: 44px;
   padding: 6px 20px;
-  font-family: var(--s-title);
-  font-weight: var(--s-title-weight);
+  font-family: var(--s-heading);
+  font-weight: var(--s-heading-weight);
   color: var(--s-btn-text);
   background-color: var(--s-btn-bg);
   border-radius: var(--s-border-radius);
@@ -61,9 +61,8 @@ a.s-button {
   max-width: 100%;
 }
 .s-box {
-  box-shadow: $box-shadow;
-  border-radius: $box-border-radius;
-  border: $box-border;
+  box-shadow: var(--s-shadow);
+  border-radius: var(--s-border-radius);
   overflow: hidden;
 }
 .s-space {
@@ -265,11 +264,11 @@ a.s-button {
     height: 44px;
     width: 44px;
     z-index: 10;
-    color: $text;
+    color: var(--s-text);
     cursor: pointer;
     &:hover {
-      background-color: $primary;
-      color: $bg;
+      background-color: var(--s-accent);
+      color: var(--s-bg);
     }
   }
   &-login {
@@ -287,7 +286,7 @@ a.s-button {
     max-width: 350px;
     box-shadow: none;
     border: none;
-    border-bottom: 3px solid $primary;
+    border-bottom: 3px solid var(--s-accent);
     border-radius: 0;
     .search-field {
       padding-left: 6px;

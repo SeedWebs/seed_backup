@@ -1,35 +1,5 @@
-//== GENERAL
-$primary: #0f6b4e;
-$primary-hover: #718f7f;
 $text: #242d2e;
-$bg: #fff;
-$light: #f8f9fa;
-$line: #dcdfe5;
-$gray: #878f9d;
 
-//== BUTTON
-$button-bg: $primary;
-$button-text: $bg;
-$button-hover-bg: $primary-hover;
-$button-hover-text: $bg;
-$button-border-radius: 100px;
-
-//== BOX/CARD
-$box-bg: $bg;
-$box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-$box-border: none;
-$box-border-radius: 3px;
-$box-padding: 15px;
-/*
-$box-shadow: none;
-$box-border-radius: 0;
-$box-padding: 0;
-$box-border: 1px solid ;
-*/
-
-//== FONTS
-$heading-font: "Anuphan", sans-serif; // Maledpan;
-$heading-font-weight: 500;
 $heading-line-height: 1.4;
 $body-font: "ChulaCharas-New", sans-serif;
 $body-font-size: 16px;
@@ -47,7 +17,7 @@ $header-d-height: 70px;
 $header-d-bg: #fff;
 $header-d-text: $text;
 $header-d-line: #eee;
-$header-d-hover-text: $primary;
+$header-d-hover-text: var(--s-accent);
 
 $nav-m-bg: $text;
 $nav-m-text: #fff;
@@ -64,7 +34,11 @@ $body-text: $text;
 
 //== TITLE (For Banner style, except Size.)
 $title-bg: #000;
-$title-bg-blank: linear-gradient(124deg, $primary 0%, $primary-hover 100%);
+$title-bg-blank: linear-gradient(
+  124deg,
+  var(--s-accent) 0%,
+  var(--s-accent)-hover 100%
+);
 $title-bg-opacity: 0.7;
 $title-blur: 20px; // none, 10px, 20px, etc.
 $title-text: #fff;
@@ -79,13 +53,13 @@ $slider-text: #fff;
 $slider-opacity: 0.7;
 
 //== LINK
-$link-text: $primary;
-$link-hover-text: $primary-hover;
+$link-text: var(--s-accent);
+$link-hover-text: var(--s-accent)-hover;
 $link-active-text: $text;
-$text-muted: $gray;
+$text-muted: #888;
 
 //== TABLE
-$table-line: $line;
+$table-line: var(--s-line);
 $table-th-bg: #eee;
 $table-th-text: $text;
 
@@ -97,7 +71,7 @@ $input-border: 1px solid rgb(220, 224, 228);
 $input-border-radius: 0;
 
 //== FOOTER
-$footer-m-bg: $gray;
+$footer-m-bg: #888;
 $footer-m-text: rgba(255, 255, 255, 0.9);
 $footer-m-height: 40px;
 $footer-d-height: 50px;
@@ -116,9 +90,9 @@ $footer-d-height: 50px;
   --s-btn-text: var(--s-bg);
   --s-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   --s-box-padding: 15px;
-  --s-title: "Anuphan", sans-serif;
-  --s-title-weight: 500;
-  --s-title-line-height: 1.3;
+  --s-heading: "Anuphan", sans-serif;
+  --s-heading-weight: 500;
+  --s-heading-line-height: 1.3;
   --s-body: "kmitl2020", sans-serif;
   --s-body-line-height: 1.625;
   --s-space: 16px;
