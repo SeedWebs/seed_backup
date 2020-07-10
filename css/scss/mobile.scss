@@ -442,6 +442,10 @@
     line-height: 0;
     margin-bottom: 15px;
     overflow: hidden;
+    a:hover,
+    a:active {
+      opacity: 1;
+    }
     img {
       width: 100%;
       transition: 0.5s ease;
