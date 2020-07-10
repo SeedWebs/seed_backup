@@ -28,7 +28,8 @@
     <div class="s-slider -full -dots-in">
         <?php 
             $args = array(
-                'posts_per_page' => 2,
+                'posts_per_page' => 3,
+                'orderby' => 'rand'
             );
             $the_query = new WP_Query( $args );
             while ( $the_query->have_posts() ) {
@@ -47,10 +48,10 @@
     <div class="s-container">
 
         <h2 class="s-title">SLIDER • HEADLINE</h2>
-        <div class="s-slider -large -dots-in">
+        <div class="s-slider  -m1.2 -d1.2 -center-m -center-d ">
             <?php 
 			$args = array(
-                'posts_per_page' => 3,
+                'posts_per_page' => 8,
                 'orderby' => 'rand'
 			);
             $the_query = new WP_Query( $args );
@@ -282,7 +283,7 @@
 
 
         <h2 class="s-title">SLIDER • CARD</h2>
-        <div class="s-slider -m1.2 -d4 -large">
+        <div class="s-slider -m1.2 -center-m -d4 -large">
             <?php 
                 $args = array(
                     'posts_per_page' => 5,
