@@ -4,7 +4,7 @@
 
 WordPress Starter Theme from SeedThemes
 
-Seed is a commercial WordPress theme available in Seed Kit from https://th.seedthemes.com/seed-kit/. This theme is hosted here on a public Github repository in order to better facilitate community contributions from developers and users alike. If you have a suggestion, a bug report, or a patch for an issue, feel free to submit it here.
+Seed is a commercial WordPress theme available in Seed Kit from https://th.seedthemes.com/seed-kit/ This theme is hosted here on a public Github repository in order to better facilitate community contributions from developers and users alike. If you have a suggestion, a bug report, or a patch for an issue, feel free to submit it here.
 
 This repository does not include img and font folders. Then it will not work as a complete theme. Please purchase a valid license and download from SeedThemes.com. We do not provide support to anyone that does not hold a valid license key.
 
