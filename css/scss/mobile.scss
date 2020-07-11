@@ -108,46 +108,40 @@
     &:before {
       // Line: 1 (Relative to line 2)
       left: 0;
-      right: -3px;
+      right: -4px;
       top: -8px;
     }
     & {
       // Line: 2
       left: 16px;
-      right: 15px;
+      right: 14px;
     }
     &:after {
       // Line: 3 (Relative to line 2)
       left: 0;
-      right: 3px;
+      right: 4px;
       top: 8px;
     }
   }
 
   &.active {
     b {
+      background-color: transparent;
       &,
       &:after,
       &:before {
         transition: top 0.2s, left 0.2s, background-color 0.2s,
           transform 0.2s 0.15s;
       }
-
-      & {
-        background-color: transparent;
-      }
-
       &:before,
       &:after {
         left: 0;
         top: 0;
         right: 0;
       }
-
       &:before {
         transform: rotate(-45deg);
       }
-
       &:after {
         transform: rotate(45deg);
       }
