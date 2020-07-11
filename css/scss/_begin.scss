@@ -389,6 +389,8 @@ input[type="search"],
   width: 100%;
   transition: 0.2s border-color ease-in-out;
   font-size: 16px;
+  font-family: var(--s-heading);
+  font-weight: var(--s-heading-weight);
   &:focus {
     border-color: var(--s-accent-hover);
   }

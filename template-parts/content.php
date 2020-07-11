@@ -20,7 +20,11 @@
             <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
             <?php if ('post' === get_post_type()) : ?>
             <div class="entry-meta">
-                <?php seed_posted_on(); ?>
+                <?php 
+                    seed_posted_on(false); 
+                    // seed_posted_by();
+                    // seed_posted_cats();
+                ?>
             </div>
             <?php endif; ?>
         </header>
