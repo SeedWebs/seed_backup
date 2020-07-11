@@ -378,6 +378,8 @@ textarea:focus,
 *:focus {
   outline: 0 !important;
 }
+input[type="text"],
+input[type="search"],
 .input,
 .input-text {
   border: 1px solid var(--s-border);
@@ -388,7 +390,7 @@ textarea:focus,
   transition: 0.2s border-color ease-in-out;
   font-size: 16px;
   &:focus {
-    border-color: var(--s-accent);
+    border-color: var(--s-accent-hover);
   }
 }
 .screen-reader-text {

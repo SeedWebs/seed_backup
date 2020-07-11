@@ -35,12 +35,11 @@ $page_content_width: 1120px; // 1120px + padding
 
 .block-editor {
   .editor-styles-wrapper {
-    color: $body-text;
+    color: var(--s-text);
     p {
-      font-family: $body-font;
-      line-height: $body-line-height;
-      font-size: $body-font-size;
-      font-size: $body-font-size;
+      font-family: var(--s-body);
+      line-height: var(--s-body-line-height);
+      font-size: 16px;
     }
     ._heading {
       font-family: var(--s-heading);
@@ -56,22 +55,24 @@ $page_content_width: 1120px; // 1120px + padding
   font-weight: var(--s-heading-weight);
 }
 
-.wp-block {
-  max-width: $post_content_width;
-  &[data-align="wide"] {
-    max-width: none;
-    @media (min-width: 992px) {
+body.post-type-post {
+  .wp-block {
+    max-width: $post_content_width;
+    &[data-align="wide"] {
       max-width: none;
-      margin-left: calc(25vw - 25%);
-      margin-right: calc(25vw - 25%);
+      @media (min-width: 992px) {
+        max-width: none;
+        margin-left: calc(25vw - 25%);
+        margin-right: calc(25vw - 25%);
+      }
     }
-  }
-  &[data-align="full"] {
-    max-width: none;
+    &[data-align="full"] {
+      max-width: none;
+    }
   }
 }
 
-body.s-type-page #wpwrap {
+body.post-type-page #wpwrap {
   .editor-post-title__block.wp-block {
     max-width: $page_content_width;
   }

@@ -11,13 +11,16 @@
         <?php if ( 'post' === get_post_type() ) : ?>
         <div class="entry-meta">
             <?php seed_posted_on(); ?>
+            <?php seed_posted_by(); ?>
+            <?php seed_posted_cats(); ?>
         </div>
         <?php endif; ?>
     </header>
 
     <div class="entry-content">
         <?php the_content(); ?>
-        <?php wp_link_pages( array('before' => '<div class="page-links">' . esc_html__( 'Pages:', 'seed' ),'after'  => '</div>') ); ?>
+
+        <?php seed_posted_tags(); ?>
 
         <?php if($GLOBALS['s_blog_profile'] == 'enable') :?>
         <div class="entry-author">

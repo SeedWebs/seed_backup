@@ -30,7 +30,27 @@ if ( ! function_exists( 'seed_posted_on' ) ) :
 		echo ' <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 		echo '</span>';
 
+	}
+endif;
 
+if ( ! function_exists( 'seed_posted_by' ) ) :
+	/**
+	 * Prints HTML with meta information for the current author.
+	 */
+	function seed_posted_by() {
+		echo '<span class="byline _heading">';
+		seed_icon('user');
+		echo '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+		echo '</span>';
+
+	}
+endif;
+
+if ( ! function_exists( 'seed_posted_cats' ) ) :
+	/**
+	 * Show Categories
+	 */
+	function seed_posted_cats() {
 		if ( 'post' === get_post_type() ) {
 			$categories_list = get_the_category_list( esc_html__( ', ', 'seed' ) );
 			if ( $categories_list ) {
@@ -40,40 +60,31 @@ if ( ! function_exists( 'seed_posted_on' ) ) :
 				echo '</span>';
 			}
 		}
-
 	}
 endif;
 
-if ( ! function_exists( 'seed_posted_by' ) ) :
+
+
+if ( ! function_exists( 'seed_posted_tags' ) ) :
 	/**
-	 * Prints HTML with meta information for the current author.
+	 * Show Tags
 	 */
-	function seed_posted_by() {
-		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'seed' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);
-
-		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
+	function seed_posted_tags() {
+		if ( 'post' === get_post_type() ) {
+			$tags_list = get_the_tag_list( '',' ' );
+			if ( $tags_list ) {
+				echo '<p class="tags-links _heading">'. $tags_list . '</p>';
+			}
+		}
 	}
 endif;
+
 
 if ( ! function_exists( 'seed_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
 	function seed_entry_footer() {
-		// Hide category and tag text for pages.
-		if ( 'post' === get_post_type() ) {
-			
-			$tags_list = get_the_tag_list( '',' ' );
-			if ( $tags_list ) {
-				echo '<p class="tags-links">'. $tags_list . '</p>';
-			}
-		}
-
 		edit_post_link(
 			sprintf(
 				wp_kses(
@@ -202,7 +213,7 @@ function seed_banner_title($post_id) {
 		}
 		if (!$img_banner) {
 			$thumb_id = get_post_thumbnail_id($post_id);
-			$thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);
+			$thumb_url = wp_get_attachment_image_src($thumb_id, 'full', false);
 			$img_banner = $thumb_url[0];
 		}
 		$banner_bg = '<div class="bg';

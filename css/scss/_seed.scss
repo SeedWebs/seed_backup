@@ -19,10 +19,10 @@
 }
 .table,
 .wp-block-table table {
-  border: 1px solid $table-line;
+  border: 1px solid var(--s-line);
   thead th {
-    background-color: $table-th-bg;
-    color: $table-th-text;
+    background-color: var(--s-bg);
+    color: var(--s-text);
   }
   th,
   td {
@@ -45,21 +45,34 @@
   }
 }
 .site .s-button a,
-a.s-button {
-  display: flex;
-  align-items: center;
+a.s-button,
+.button-primary,
+input[type="submit"] {
   line-height: 1;
   min-height: 44px;
   padding: 6px 20px;
   font-family: var(--s-heading);
   font-weight: var(--s-heading-weight);
-  color: var(--s-btn-text);
-  background-color: var(--s-btn-bg);
+  color: var(--s-bg);
+  background-color: var(--s-accent);
   border-radius: var(--s-border-radius);
   border: none;
   width: max-content;
   max-width: 100%;
+  transition: 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--s-accent-hover);
+  }
 }
+
+.site .s-button a,
+a.s-button,
+.button-primary {
+  display: flex;
+  align-items: center;
+}
+
 .s-box {
   box-shadow: var(--s-shadow);
   border-radius: var(--s-border-radius);

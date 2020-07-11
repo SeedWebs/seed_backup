@@ -208,10 +208,6 @@ function seed_scripts()
     if ($GLOBALS['s_fontawesome'] == 'enable') {
         wp_enqueue_style('s-fa', get_theme_file_uri('/fonts/fontawesome/css/all.min.css'), array(),'5.10.1');
     }
-    
-    if ($GLOBALS['s_flickity'] == 'enable') {
-        wp_enqueue_script('s-fkt', get_theme_file_uri('/js/flickity.pkgd.min.js'), array(), '2.2.1', true);
-    }
 
     wp_enqueue_script('s-scripts', get_theme_file_uri('/js/scripts.js'), array(), false, true);
     
@@ -291,7 +287,6 @@ function seed_redirect_to_request( $redirect_to, $request, $user ){
 if($GLOBALS['s_member_url'] != 'none') {  
     add_filter('login_redirect', 'seed_redirect_to_request', 10, 3);
 }
-
 
 
 /**

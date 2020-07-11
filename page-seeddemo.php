@@ -310,7 +310,7 @@
         <h2 class="s-title">ICONS</h2>
         <b>Support all icons from <a href="https://feathericons.com/" target="_blank">Feather
                 Icons</a> using</b><br>
-        <code>&#60;?php seed_icon('ICON-NAME'); ?&#62;</code>
+        <small><code>&#60;?php seed_icon('ICON-NAME'); ?&#62;</code></small>
 
         <p class="demo-icons">
             <?php seed_icon('activity'); ?>

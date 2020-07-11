@@ -1,5 +1,3 @@
-@import "variables";
-
 /* == HEADER == */
 body.headbar-d {
   .site-branding,
@@ -8,25 +6,25 @@ body.headbar-d {
   }
 }
 .site-header {
-  min-height: $header-d-height;
-  background-color: $header-d-bg;
+  min-height: var(--s-header-height);
+  background-color: var(--s-bg);
   line-height: 1;
   > .s-container {
     position: relative;
-    min-height: $header-d-height;
+    min-height: var(--s-header-height);
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
   }
   a {
-    color: $header-d-text;
+    color: var(--s-text);
     &:hover {
-      color: $header-d-hover-text;
+      color: var(--s-accent-hover);
     }
   }
 }
 .site-header-space {
-  min-height: $header-d-height;
+  min-height: var(--s-header-height);
 }
 .site-branding {
   position: relative;
@@ -34,7 +32,7 @@ body.headbar-d {
   left: auto;
   transform: none;
   img {
-    max-height: $header-d-height;
+    max-height: var(--s-header-height);
   }
 }
 .site-title {
@@ -47,7 +45,6 @@ body.headbar-d {
   opacity: 0.75;
   padding-top: 2px;
 }
-
 .site-nav-d {
   margin-left: auto;
   > div {
@@ -94,9 +91,9 @@ body.headbar-d {
     position: absolute;
     z-index: 90;
     top: calc(100% + 5px);
-    filter: drop-shadow($submenu-shadow);
+    filter: drop-shadow(var(--s-shadow));
     transition: all 0.3s ease-in-out;
-    background-color: $nav-d-bg;
+    background-color: var(--s-bg);
     min-width: 180px;
     &::before {
       content: "";
@@ -107,7 +104,7 @@ body.headbar-d {
       height: 0;
       border-left: 8px solid transparent;
       border-right: 8px solid transparent;
-      border-bottom: 8px solid $nav-d-bg;
+      border-bottom: 8px solid var(--s-bg);
       z-index: 1;
     }
     li {
@@ -118,9 +115,9 @@ body.headbar-d {
       a {
         padding: 10px 0;
         display: block;
-        color: $nav-d-text;
+        color: var(--s-text);
         text-align: left;
-        border-bottom: 1px solid $header-d-line;
+        border-bottom: 1px solid var(--s-line);
       }
       &:last-child {
         > a {
@@ -176,18 +173,6 @@ body.headbar-d {
 }
 
 /* == BODY == */
-.main-header {
-  &.-banner {
-    padding-bottom: calc(var(--s-space) - 4);
-    min-height: $title-d-height;
-    .main-title {
-      width: 750px;
-    }
-  }
-  .title {
-    font-size: $title-d-size;
-  }
-}
 
 /* CONTENT ITEM */
 .content-item {
@@ -286,16 +271,7 @@ body.page-template-page-form .site-content {
   width: 32%;
 }
 
-/* == SIDEBAR == */
-
 /* FOOTER */
-
 .site-login {
   max-height: 400px;
-}
-.site-footer-space {
-  min-height: $footer-d-height;
-}
-.site-footer {
-  min-height: $footer-d-height;
 }

@@ -1,94 +1,13 @@
-$text: #242d2e;
-
-$heading-line-height: 1.4;
-$body-font: "ChulaCharas-New", sans-serif;
-$body-font-size: 16px;
-$body-line-height: 1.625;
-
-//== SPACE (Gutter)
-$space-m: 16px;
-$space-d: 30px;
-
-//== HEADER
-$header-m-height: 50px;
-$header-m-bg: #fff;
-$header-m-text: $text;
-$header-d-height: 70px;
-$header-d-bg: #fff;
-$header-d-text: $text;
-$header-d-line: #eee;
-$header-d-hover-text: var(--s-accent);
-
-$nav-m-bg: $text;
-$nav-m-text: #fff;
-$nav-m-line: rgba(255, 255, 255, 0.2);
-$nav-d-bg: #fff;
-$nav-d-text: $text;
-
-$submenu-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-
-//== BODY
-$html-bg: $text;
-$body-bg: #fff;
-$body-text: $text;
-
-//== TITLE (For Banner style, except Size.)
-$title-bg: #000;
-$title-bg-blank: linear-gradient(
-  124deg,
-  var(--s-accent) 0%,
-  var(--s-accent)-hover 100%
-);
-$title-bg-opacity: 0.7;
-$title-blur: 20px; // none, 10px, 20px, etc.
-$title-text: #fff;
-$title-m-height: 120px;
-$title-d-height: 220px;
-$title-m-size: 24px;
-$title-d-size: 32px;
-
-//== SLIDER
-$slider-bg: #000;
-$slider-text: #fff;
-$slider-opacity: 0.7;
-
-//== LINK
-$link-text: var(--s-accent);
-$link-hover-text: var(--s-accent)-hover;
-$link-active-text: $text;
-$text-muted: #888;
-
-//== TABLE
-$table-line: var(--s-line);
-$table-th-bg: #eee;
-$table-th-text: $text;
-
-//== FORM
-$form-bg-bg: #f2f2f2;
-$form-bg: #fff;
-$input-bg: #fbfbfb;
-$input-border: 1px solid rgb(220, 224, 228);
-$input-border-radius: 0;
-
-//== FOOTER
-$footer-m-bg: #888;
-$footer-m-text: rgba(255, 255, 255, 0.9);
-$footer-m-height: 40px;
-$footer-d-height: 50px;
-
 // CSS VARIABLES
 :root {
   --s-accent: #0f6b4e;
   --s-accent-hover: #03a572;
-  --s-bg: #ffffff;
-  --s-text: #242d2e;
-  --s-light: #f8f9fa;
+  --s-bg: #fff;
+  --s-text: #222;
   --s-line: #dcdfe5;
   --s-noti: #c00;
   --s-border: #7e8993;
   --s-border-radius: 3px;
-  --s-btn-bg: var(--s-accent);
-  --s-btn-text: var(--s-bg);
   --s-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   --s-box-padding: 15px;
   --s-heading: "Anuphan", sans-serif;
@@ -97,13 +16,47 @@ $footer-d-height: 50px;
   --s-body: "kmitl2020", sans-serif;
   --s-body-line-height: 1.625;
   --s-space: 16px;
+  --s-header-height: 50px;
+  --s-footer-height: 40px;
+  --s-title-size: 1.5rem;
+  --s-title-height: 120px;
+  --s-title-bg-blur: 20px;
+  --s-title-bg-opacity: 0.7;
 }
+.site-header {
+  --s-bg: #fff;
+  --s-text: #222;
+}
+.site-nav-m {
+  --s-bg: #111;
+  --s-text: #eee;
+  --s-line: #333;
+}
+.site-nav-d {
+  --s-bg: #fff;
+  --s-text: #222;
+}
+.content-headline {
+  --s-bg: #000;
+  --s-text: #fff;
+}
+.site-footer {
+  --s-bg: #f1f2f3;
+  --s-text: #787980;
+}
+
 @media (min-width: 768px) {
   :root {
     --s-space: 20px;
   }
 }
-.site-nav-m {
-  --s-bg: #111;
-  --s-text: #eee;
+
+@media (min-width: 992px) {
+  :root {
+    --s-header-height: 70px;
+  }
+  .main-header {
+    --s-title-height: 220px;
+    --s-title-size: 2rem;
+  }
 }
