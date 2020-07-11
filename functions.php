@@ -25,7 +25,7 @@ if (!isset($GLOBALS['s_thumb_crop']))           {$GLOBALS['s_thumb_crop']       
 if (!isset($GLOBALS['s_title_style']))          {$GLOBALS['s_title_style']          = 'banner';}        // minimal, banner
 
 /* ADD-ON */
-if (!isset($GLOBALS['s_member_url']))           {$GLOBALS['s_member_url']           = '/account/';}          // none, url path such as: /my-account/
+if (!isset($GLOBALS['s_member_url']))           {$GLOBALS['s_member_url']           = 'none';}          // none, url path such as: /my-account/
 if (!isset($GLOBALS['s_member_label']))         {$GLOBALS['s_member_label']         = 'Member';}        // ex: Member, สมาชิก
 if (!isset($GLOBALS['s_keen_slider']))          {$GLOBALS['s_keen_slider']          = 'enable';}        // disable, enable
 if (!isset($GLOBALS['s_style_css']))            {$GLOBALS['s_style_css']            = 'disable';}       // disable, enable
