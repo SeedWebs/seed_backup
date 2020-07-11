@@ -79,6 +79,7 @@ $footer-d-height: 50px;
 // CSS VARIABLES
 :root {
   --s-accent: #0f6b4e;
+  --s-accent-hover: #03a572;
   --s-bg: #ffffff;
   --s-text: #242d2e;
   --s-light: #f8f9fa;
@@ -101,4 +102,8 @@ $footer-d-height: 50px;
   :root {
     --s-space: 20px;
   }
+}
+.site-nav-m {
+  --s-bg: #111;
+  --s-text: #eee;
 }

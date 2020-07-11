@@ -43,7 +43,7 @@
                 <?php endif; ?>
 
                 <a class="site-search s-modal-trigger m-user" onclick="return false;"
-                    data-popup-trigger="site-search"><i class="si-search-o"></i></a>
+                    data-popup-trigger="site-search"><?php seed_icon('search'); ?></a>
 
                 <?php seed_member_menu() ?>
 
@@ -60,7 +60,7 @@
         </header>
 
         <div class="s-modal -full" data-s-modal="site-search">
-            <span class="s-modal-close"><i class="si-cross-o"></i></span>
+            <span class="s-modal-close"><?php seed_icon('x'); ?></span>
             <?php get_search_form(); ?>
         </div>
 

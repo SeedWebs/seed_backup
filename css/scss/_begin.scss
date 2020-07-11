@@ -319,9 +319,9 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-  transition: 0.3s;
+  transition: opacity 0.3s, color 0.3s;
   &:hover {
-    opacity: 0.85;
+    color: var(--s-accent-hover);
   }
   &:active {
     opacity: 0.6;

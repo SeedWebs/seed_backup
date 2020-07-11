@@ -234,6 +234,7 @@ a.s-button {
     width: 6px;
     height: 6px;
     opacity: 0.5;
+    transition: 0.3s ease;
     &.active {
       width: 18px;
       opacity: 1;
@@ -402,14 +403,13 @@ a.s-button {
   }
 }
 
-._space,
-.s-space {
-  margin-bottom: var(--s-space);
+._space {
+  margin-bottom: var(--s-space) !important;
 }
 ._space_0 {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   .slider-area {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 }
 ._scroll {

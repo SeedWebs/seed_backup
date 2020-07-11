@@ -12,7 +12,7 @@ document.addEventListener(
         addClass("#page", "show-nav");
       }
     }
-    if (event.target.matches("#site-nav-m .menu-item-has-children i")) {
+    if (event.target.matches("#site-nav-m .menu-item-has-children > svg")) {
       if (event.target.parentNode.classList.contains("active")) {
         event.target.parentNode.classList.remove("active");
       } else {
@@ -39,7 +39,10 @@ document.addEventListener(
 document
   .querySelectorAll("#site-nav-m .menu-item-has-children")
   .forEach((e) => {
-    e.insertAdjacentHTML("beforeend", '<i class="si-caret-down"></i>');
+    e.insertAdjacentHTML(
+      "beforeend",
+      '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>'
+    );
   });
 
 // Slider

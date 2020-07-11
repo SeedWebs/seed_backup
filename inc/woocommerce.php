@@ -27,7 +27,7 @@ add_action( 'after_setup_theme', 'seed_woo_setup' );
 /* Custom Breadcrumb delimiter */
 add_filter( 'woocommerce_breadcrumb_defaults', 'seed_change_breadcrumb_delimiter' );
 function seed_change_breadcrumb_delimiter( $defaults ) {
-	$defaults['delimiter'] = '<i class="si-angle-right"></i>';
+	$defaults['delimiter'] = '›';
 	return $defaults;
 }
 
