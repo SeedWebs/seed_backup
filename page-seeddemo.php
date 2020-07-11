@@ -48,7 +48,7 @@
     <div class="s-container">
 
         <h2 class="s-title">SLIDER • HEADLINE</h2>
-        <div class="s-slider  -m1.2 -d1.2 -center-m -center-d ">
+        <div class="s-slider -m1.2 -d1.2 -center-m -center-d ">
             <?php 
 			$args = array(
                 'posts_per_page' => 8,
