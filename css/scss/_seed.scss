@@ -65,13 +65,6 @@ a.s-button {
   border-radius: var(--s-border-radius);
   overflow: hidden;
 }
-.s-space {
-  margin-bottom: var(--s-space);
-}
-.s-scroll {
-  -webkit-overflow-scrolling: touch;
-  overflow: scroll;
-}
 .s-sec {
   padding-top: calc(var(--s-space) * 2);
   padding-bottom: calc(var(--s-space) * 2);
@@ -149,7 +142,7 @@ a.s-button {
 
 .slider-area {
   margin: 0 calc(var(--s-space) / -2) var(--s-space);
-  padding-bottom: var(--s-space);
+  padding-bottom: 16px;
   .-center-d & {
     margin-left: 0;
     margin-right: 0;
@@ -198,7 +191,30 @@ a.s-button {
     }
   }
   &.-dots-in {
-    //
+    .slider-area {
+      padding-bottom: 0;
+    }
+    .slider {
+      padding-bottom: 0;
+    }
+    .dots {
+      bottom: 10px;
+    }
+    .dot {
+      background-color: var(--s-bg);
+    }
+    .nav > a {
+      top: calc(50% - 20px);
+      &:before {
+        border-color: var(--s-bg);
+      }
+    }
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
   }
   .dots {
     position: absolute;
@@ -224,18 +240,24 @@ a.s-button {
     }
   }
   @media (min-width: 992px) {
+    &.-togrid {
+      .nav,
+      .dots {
+        display: none;
+      }
+      .slider-area {
+        padding-bottom: 0;
+      }
+    }
     .nav {
-      font-size: 40px;
-      line-height: 1;
       font-family: Arial;
       text-align: center;
       > a {
         position: absolute;
-        top: calc(50% - 20px);
+        top: calc(50% - 30px);
         height: 40px;
         width: 40px;
         z-index: 10;
-        line-height: 34px;
         cursor: pointer;
         &:before {
           content: "";
@@ -244,8 +266,9 @@ a.s-button {
           left: calc(50% - 8px);
           width: 16px;
           height: 16px;
-          border-top: 2px solid var(--s-border);
-          border-right: 2px solid var(--s-border);
+          border-top: 3px solid var(--s-border);
+          border-right: 3px solid var(--s-border);
+          border-radius: 2px;
         }
       }
     }
@@ -379,6 +402,20 @@ a.s-button {
   }
 }
 
+._space,
+.s-space {
+  margin-bottom: var(--s-space);
+}
+._space_0 {
+  margin-bottom: 0;
+  .slider-area {
+    margin-bottom: 0;
+  }
+}
+._scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+}
 @media (max-width: 991px) {
   ._desktop {
     display: none !important;

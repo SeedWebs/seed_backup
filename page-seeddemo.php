@@ -25,7 +25,7 @@
 ?>
 
 <div class="s-container">
-    <div class="s-slider -full -dots-in">
+    <div class="s-slider -full -dots-in _space_0">
         <?php 
             $args = array(
                 'posts_per_page' => 3,
@@ -43,12 +43,11 @@
     </div>
 </div>
 
-
 <div class="s-sec" style="background: #eee;">
     <div class="s-container">
 
         <h2 class="s-title">SLIDER • HEADLINE</h2>
-        <div class="s-slider -m1.2 -d1.2 -center-m -center-d ">
+        <div class="s-slider -m1.2 -d1.2 -center-m -center-d">
             <?php 
 			$args = array(
                 'posts_per_page' => 8,
@@ -64,10 +63,6 @@
             wp_reset_postdata();
             ?>
         </div>
-
-
-        <div class="s-space"></div>
-
 
         <h2 class="s-title">GRID • HERO</h2>
         <div class="s-grid">
@@ -85,10 +80,6 @@
             ?>
         </div>
 
-
-        <div class="s-space"></div>
-
-
         <h2 class="s-title">GRID • CARD</h2>
         <div class="s-grid -d3">
             <?php 
@@ -104,10 +95,6 @@
             wp_reset_postdata();
             ?>
         </div>
-
-
-        <div class="s-space"></div>
-
 
         <h2 class="s-title">GRID • LIST • PAGINATION</h2>
         <div class="s-grid -d2">
@@ -129,10 +116,6 @@
             wp_reset_postdata();
         ?>
 
-
-        <div class="s-space"></div>
-
-
         <h2 class="s-title">GRID • CAPTION</h2>
         <div class="s-grid -m2 -d4 hide-summary">
             <?php 
@@ -149,10 +132,6 @@
             wp_reset_postdata();
             ?>
         </div>
-
-
-        <div class="s-space"></div>
-
 
         <h2 class="s-title">GRID • CARD • HIDE SUMMARY</h2>
         <div class="s-grid -d4 hide-summary">
@@ -171,10 +150,6 @@
             ?>
         </div>
 
-
-        <div class="s-space"></div>
-
-
         <h2 class="s-title">GRID • CONTENT</h2>
         <div class="s-grid -d3">
             <?php 
@@ -191,8 +166,6 @@
             wp_reset_postdata();
             ?>
         </div>
-
-
     </div>
 </div>
 
@@ -255,8 +228,6 @@
     </div>
 </div>
 
-
-
 <div class="s-sec" style="background: #eee;">
     <div class="s-container">
 
@@ -278,12 +249,8 @@
             ?>
         </div>
 
-
-        <div class="s-space"></div>
-
-
         <h2 class="s-title">SLIDER • CARD</h2>
-        <div class="s-slider -m1.2 -center-m -d4 -large">
+        <div class="s-slider -m1.2 -center-m -d3 -large">
             <?php 
                 $args = array(
                     'posts_per_page' => 5,
@@ -300,12 +267,8 @@
             ?>
         </div>
 
-
-        <div class="s-space"></div>
-
-
         <h2 class="s-title">SLIDER • CAPTION</h2>
-        <div class="s-slider -m2 -d3">
+        <div class="s-slider -m2 -d4">
             <?php 
                 $args = array(
                     'posts_per_page' => 4,
@@ -324,6 +287,4 @@
 
     </div>
 </div>
-
-
 <?php get_footer(); ?>

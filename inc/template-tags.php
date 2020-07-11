@@ -276,8 +276,6 @@ function seed_banner_title($post_id) {
 }
 
 
-
-
 /*
  * Output Author Avatar & Profile in .content-item
 */
