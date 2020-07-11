@@ -600,6 +600,7 @@
   a {
     color: var(--s-text);
     display: block;
+    height: 100%;
   }
   &.-bright {
     .pic {
@@ -614,6 +615,7 @@
     }
   }
   .pic {
+    height: 100%;
     img {
       width: 100%;
       height: 100%;
