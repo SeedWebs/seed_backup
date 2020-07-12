@@ -16,13 +16,12 @@
                 "id": ""
             },
             "choices": {
+                "default": "Default",
                 "banner": "Banner",
                 "minimal": "Minimal",
                 "hidden": "Hidden"
             },
-            "default_value": [
-                "banner"
-            ],
+            "default_value": "default",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -119,34 +118,6 @@
             "append": ""
         },
         {
-            "key": "field_5d5521ba74c0c",
-            "label": "Headline Style",
-            "name": "headline_style",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "1": "Title on faded banner",
-                "2": "Title on bright banner",
-                "3": "Banner image only"
-            },
-            "default_value": [
-                3
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
             "key": "field_5d551d91f7c04",
             "label": "Headline Title",
             "name": "headline_title",
@@ -156,9 +127,9 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5d5521ba74c0c",
-                        "operator": "!=",
-                        "value": "3"
+                        "field": "field_5d1a0217cf408",
+                        "operator": "==",
+                        "value": "banner"
                     }
                 ]
             ],
@@ -183,9 +154,9 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5d5521ba74c0c",
-                        "operator": "!=",
-                        "value": "3"
+                        "field": "field_5d1a0217cf408",
+                        "operator": "==",
+                        "value": "banner"
                     }
                 ]
             ],
@@ -225,5 +196,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1571501078
+    "modified": 1589708244
 }

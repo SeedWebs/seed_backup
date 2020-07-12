@@ -28,8 +28,7 @@
     <div class="s-slider -full -dots-in _space_0">
         <?php 
             $args = array(
-                'posts_per_page' => 3,
-                'orderby' => 'rand'
+                'posts_per_page' => 2,
             );
             $the_query = new WP_Query( $args );
             while ( $the_query->have_posts() ) {
@@ -50,7 +49,7 @@
         <div class="s-slider -m1.2 -d1.2 -center-m -center-d">
             <?php 
 			$args = array(
-                'posts_per_page' => 8,
+                'posts_per_page' => 3,
                 'orderby' => 'rand'
 			);
             $the_query = new WP_Query( $args );
@@ -61,6 +60,65 @@
                 echo '</div>';
             }
             wp_reset_postdata();
+            ?>
+        </div>
+
+        <h2 class="s-title">SLIDER • HERO</h2>
+        <div class="s-slider -m1.2 -d1 -center-m">
+            <?php 
+			$args = array(
+                'posts_per_page' => 3,
+                'orderby' => 'rand'
+			);
+            $the_query = new WP_Query( $args );
+            while ( $the_query->have_posts() ) {
+                $the_query->the_post();
+                echo '<div class="slider">';
+                get_template_part( 'template-parts/content', 'hero' );
+                echo '</div>';
+            }
+            wp_reset_postdata();
+            ?>
+        </div>
+
+        <h2 class="s-title">SLIDER • CARD</h2>
+        <div class="s-slider -m1.2 -d3">
+            <?php 
+			$args = array(
+                'posts_per_page' => 4,
+                'orderby' => 'rand'
+			);
+            $the_query = new WP_Query( $args );
+            while ( $the_query->have_posts() ) {
+                $the_query->the_post();
+                echo '<div class="slider">';
+                get_template_part( 'template-parts/content', 'card' );
+                echo '</div>';
+            }
+            wp_reset_postdata();
+            ?>
+        </div>
+    </div>
+</div>
+
+<div class="s-sec" style="background: #ddd;">
+    <div class="s-container">
+
+        <h2 class="s-title">SLIDER • CAPTION</h2>
+        <div class="s-slider -m2 -d4">
+            <?php 
+                $args = array(
+                    'posts_per_page' => 4,
+                    'orderby' => 'rand'
+                );
+                $the_query = new WP_Query( $args );
+                while ( $the_query->have_posts() ) {
+                    $the_query->the_post();
+                    echo '<div class="slider">';
+                    get_template_part( 'template-parts/content', 'caption' );
+                    echo '</div>';
+                }
+                wp_reset_postdata();
             ?>
         </div>
 
@@ -169,124 +227,6 @@
     </div>
 </div>
 
-<div class="s-sec" style="background: #ddd;">
-    <div class="s-container">
-
-        <h2 class="s-title">MIX</h2>
-
-        <div class="s-grid -d3">
-
-            <div class="s-grid">
-                <?php 
-                $args = array(
-                    'posts_per_page' => 1,
-                    'orderby' => 'rand'
-                );
-                $the_query = new WP_Query( $args );
-            
-                while ( $the_query->have_posts() ) {
-                    $the_query->the_post();
-                    get_template_part( 'template-parts/content', 'card' );
-                }
-                wp_reset_postdata();
-                ?>
-            </div>
-
-            <div class="s-grid">
-                <?php 
-                $args = array(
-                    'posts_per_page' => 4,
-                    'orderby' => 'rand'
-                );
-                $the_query = new WP_Query( $args );
-                
-                while ( $the_query->have_posts() ) {
-                    $the_query->the_post();
-                    get_template_part( 'template-parts/content', 'list' );
-                }
-                wp_reset_postdata();
-                ?>
-            </div>
-
-            <div class="s-grid">
-                <?php 
-                $args = array(
-                    'posts_per_page' => 2,
-                    'orderby' => 'rand'
-                );
-                $the_query = new WP_Query( $args );
-            
-                while ( $the_query->have_posts() ) {
-                    $the_query->the_post();
-                    get_template_part( 'template-parts/content', 'caption' );
-                }
-                wp_reset_postdata();
-                ?>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<div class="s-sec" style="background: #eee;">
-    <div class="s-container">
-
-        <h2 class="s-title">SLIDER • HERO</h2>
-        <div class="s-slider -large">
-            <?php 
-                $args = array(
-                    'posts_per_page' => 2,
-                    'orderby' => 'rand'
-                );
-                $the_query = new WP_Query( $args );
-                while ( $the_query->have_posts() ) {
-                    $the_query->the_post();
-                    echo '<div class="slider">';
-                    get_template_part( 'template-parts/content', 'hero' );
-                    echo '</div>';
-                }
-                wp_reset_postdata();
-            ?>
-        </div>
-
-        <h2 class="s-title">SLIDER • CARD</h2>
-        <div class="s-slider -m1.2 -center-m -d3 -large">
-            <?php 
-                $args = array(
-                    'posts_per_page' => 5,
-                    'orderby' => 'rand'
-                );
-                $the_query = new WP_Query( $args );
-                while ( $the_query->have_posts() ) {
-                    $the_query->the_post();
-                    echo '<div class="slider">';
-                    get_template_part( 'template-parts/content', 'card' );
-                    echo '</div>';
-                }
-                wp_reset_postdata();
-            ?>
-        </div>
-
-        <h2 class="s-title">SLIDER • CAPTION</h2>
-        <div class="s-slider -m2 -d4">
-            <?php 
-                $args = array(
-                    'posts_per_page' => 4,
-                    'orderby' => 'rand'
-                );
-                $the_query = new WP_Query( $args );
-                while ( $the_query->have_posts() ) {
-                    $the_query->the_post();
-                    echo '<div class="slider">';
-                    get_template_part( 'template-parts/content', 'caption' );
-                    echo '</div>';
-                }
-                wp_reset_postdata();
-            ?>
-        </div>
-
-    </div>
-</div>
 
 <style>
 .demo-icons {
@@ -305,7 +245,7 @@
 </style>
 
 
-<div class="s-sec" style="background: #eee;">
+<div class="s-sec" style="background: #fff;">
     <div class="s-container">
         <h2 class="s-title">ICONS</h2>
         <b>Support all icons from <a href="https://feathericons.com/" target="_blank">Feather

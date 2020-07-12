@@ -42,9 +42,9 @@ if ( ! function_exists( 'seed_posted_by' ) ) :
 	function seed_posted_by($show_icon = true) {
 		echo '<span class="byline _heading">';
 		if($show_icon) {
-			seed_icon('user');
+			seed_icon('s-user');
 		}
-		echo '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+		echo ' <span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
 		echo '</span>';
 
 	}
@@ -160,7 +160,7 @@ function seed_title() {
 
 /*
  * Output Member Menu
-*/
+ */
 function seed_member_menu() {
 if($GLOBALS['s_member_url'] != 'none'): ?>
 <div class="site-member">
@@ -188,91 +188,104 @@ if($GLOBALS['s_member_url'] != 'none'): ?>
 }
 
 /*
- * Output Main Header with Title
+* Get Post Thumbnail URL from Post ID
 */
+function seed_get_thumbnail($post_id) {
+	$thumb_id = get_post_thumbnail_id($post_id);
+	if ($thumb_id) {
+		$thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);
+		$banner_url = $thumb_url[0];
+	} else {
+		$banner_url = false;
+	}
+	return $banner_url;
+}
+
+/*
+ * Output Main Header with Title
+ */
 function seed_banner_title($post_id) {
-
-	// Banner Class
-	$banner_class = $GLOBALS['s_title_style'];
+	// Title Style
+	$post_title_style = '';
+	$default_title_style = get_theme_mod( 'body_title_style', $GLOBALS['s_title_style'] );
+	$title_style = $default_title_style;
 	if (function_exists('get_field')) {
-		if(get_field( 'title_style', $post_id )) {
-			$banner_class = get_field( 'title_style', $post_id );
+		$post_title_style = get_field( 'title_style', $post_id );
+		if( ($post_title_style) && ($post_title_style != 'default') ) {
+			$title_style = $post_title_style;
 		}
 	}
-
-	// Banner BG
-	$title_style = $GLOBALS['s_title_style'];
+	// Load Banner Var
 	$banner_bg = '';
-	if (function_exists('get_field')) {
-		if(get_field( 'title_style', $post_id )) {
-			$title_style = get_field( 'title_style', $post_id );
-		}
-	}
-	if($title_style == 'banner') {
-		$img_banner =  '';
-		$img_banner_blur = '';
-		$img_banner_opacity = '';
-		if (function_exists('get_field')) {
+	if ($title_style == 'banner' ) {
+		$banner_url = seed_get_thumbnail($post_id);
+		if($post_title_style == 'banner' && function_exists('get_field')) {
 			$img_banner = get_field( 'banner', $post_id );
 			$img_banner_blur = get_field( 'banner_blur', $post_id );
 			$img_banner_opacity = get_field( 'banner_opacity', $post_id );
+			if ($img_banner) {
+				$banner_url = $img_banner;
+			}
+		} else {
+			// $post_title_style == 'default'
+			if( !$banner_url ) {
+				$banner_url = get_theme_mod( 'body_title_banner', '' );
+			}
+			$img_banner_blur = get_theme_mod( 'body_title_banner_blur', '20' );
+			$img_banner_opacity = get_theme_mod( 'body_title_banner_opacity', '0.7' );
 		}
-		if (!$img_banner) {
-			$thumb_id = get_post_thumbnail_id($post_id);
-			$thumb_url = wp_get_attachment_image_src($thumb_id, 'full', false);
-			$img_banner = $thumb_url[0];
-		}
-		$banner_bg = '<div class="bg';
-		if($img_banner) {
-			$style = 'background-image: url(' . $img_banner . ');';
+		$style ='';
+		if($banner_url) {
+			$style = 'background-image: url(' . $banner_url . ');';
 			if ($img_banner_blur != '') {
 				$style .= ' filter: blur(' . $img_banner_blur . 'px);';
 			}
-			if ($img_banner_opacity) {
-				$style .= ' opacity: ' . $img_banner_opacity . ';';
-			}
-			$banner_bg .= '" style="' . $style .'"';
+			$style .= ' opacity: ' . $img_banner_opacity . ';';
+			$style = 'style="' . $style . '"';
+			$banner_bg .= '<div class="bg" ' . $style . '></div>'; 
 		} else {
-			$banner_bg .= ' -blank"';
+			$banner_bg .= '<div class="bg -blank"></div>'; 
 		}
-		$banner_bg .= '></div>';	
 	}
-
-    $permalink = get_the_permalink($post_id);
-    $breadcrumb = '';
-
-    if ( function_exists('yoast_breadcrumb') ) { 
-        $breadcrumb = yoast_breadcrumb( '<div id="breadcrumbs" class="bc">','</div>', false);    
-    }
-
-    if(is_front_page()) {
-        $title = get_bloginfo( 'name' ) . '<small>' . get_bloginfo( 'description' ) . '</small>';
-		$breadcrumb = '';
-	} elseif (is_archive()) {
-        $title = get_the_archive_title($post_id);
-    } elseif (is_404()) {
-        $title = __('Page not found', 'seed');
-    } else {
-        $title = get_the_title($post_id);
-	}
-	
-	if ( function_exists('is_shop') ) { 
-        if (is_shop()) {
-			$title = get_the_title($post_id);
+	$permalink = get_the_permalink($post_id);
+	$breadcrumb='' ; 
+	if ( function_exists('yoast_breadcrumb') ) { 
+		$breadcrumb = yoast_breadcrumb( '<div id="breadcrumbs" class="bc">' ,'</div>',false); 
+	} 
+	if( is_front_page() ) { 
+		$title = get_bloginfo( 'name' ) . '<small>' . get_bloginfo( 'description' ) . '</small>' ; 
+		$breadcrumb = '' ;
+	} elseif ( is_archive() ) { 
+		$title = get_the_archive_title($post_id); 
+		$breadcrumb = '' ;
+	} elseif ( is_404() ) { 
+		$title = __('Page not found', 'seed' ); 
+	} else { 
+		if ($title_style == 'banner' && function_exists('get_field')) {
+			$headline_title    = get_field('headline_title', $post_id);
+			$headline_subtitle = get_field('headline_subtitle', $post_id);
+			if ( $headline_title ) {
+				$title = $headline_title; 
+				if ( $headline_subtitle ) {
+					$title .= '<small>' . $headline_subtitle . '</small>';
+				}
+			} else {
+				$title = get_the_title($post_id); 
+			}
+		} else {
+			$title = get_the_title($post_id); 
 		}
-    }
-	
-    $output = '<div class="main-header -' . $banner_class . '">'
-            . $banner_bg
-			. '<div class="s-container">'
-			. '<div class="main-title _heading">'
-            . '<div class="title"><a href="' . $permalink . '">' . $title .'</a></div>'
-            . $breadcrumb
-            . '</div></div></div>';
-
-    echo $output;
-}
-
+	} 
+	if (function_exists('is_shop') ) { 
+		if (is_shop()) { 
+			$title = get_the_title($post_id); 
+		} 
+	}
+	$output = '<div class="main-header -' . $title_style .  '">' . $banner_bg . 
+			  '<div class="s-container"><div class="main-title _heading"><div class="title"><a href="' . $permalink . '">' . $title .
+			  '</a> </div>' . $breadcrumb . '</div></div></div>' ; 
+    echo $output; 
+} 
 
 /*
  * Output Author Avatar & Profile in .content-item

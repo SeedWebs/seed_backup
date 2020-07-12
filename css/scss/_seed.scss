@@ -394,16 +394,16 @@ a.s-button,
   .search-form {
     position: absolute;
     width: 88%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 350px;
-    box-shadow: none;
-    border: none;
+    top: 160px;
+    left: 6%;
+    max-width: 100%;
     border-bottom: 3px solid var(--s-accent);
-    border-radius: 0;
+    height: 43px;
     .search-field {
-      padding-left: 6px;
+      border: none;
+    }
+    button {
+      color: var(--s-accent);
     }
   }
   @media (min-width: 768px) {
@@ -412,6 +412,12 @@ a.s-button,
     }
     &.-visible {
       padding: 20px 30px 10px;
+    }
+    .search-form {
+      max-width: 350px;
+      left: 50%;
+      top: 40%;
+      transform: translateX(-50%);
     }
   }
 }

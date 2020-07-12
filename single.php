@@ -17,7 +17,7 @@ get_header(); ?>
 ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
-<div class="sige-signle <?php echo($singleclass);?>">
+<div class="site-single <?php echo($singleclass);?>">
 
     <?php seed_banner_title(get_the_ID()); ?>
 

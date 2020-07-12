@@ -31,6 +31,10 @@ document.addEventListener(
         removeClass(".site-toggle, .site-nav-m", "active");
       }
     }
+    // Search
+    if (event.target.matches(".site-search")) {
+      document.getElementById("s").focus();
+    }
   },
   false
 );

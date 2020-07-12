@@ -114,7 +114,7 @@
     & {
       // Line: 2
       left: 16px;
-      right: 14px;
+      right: 16px;
     }
     &:after {
       // Line: 3 (Relative to line 2)
@@ -157,6 +157,9 @@
   cursor: pointer;
   height: 50px;
   line-height: 26px;
+  svg {
+    pointer-events: none;
+  }
 }
 
 .site-member {
@@ -325,6 +328,7 @@
     background: #000;
     color: #fff;
     text-align: center;
+
     a {
       color: #fff;
     }
@@ -336,8 +340,9 @@
     }
   }
   &.-minimal {
-    h4 {
-      display: none;
+    padding-bottom: 0;
+    .site-single & {
+      margin-bottom: 0;
     }
   }
   &.-hidden {
@@ -366,7 +371,6 @@
   .title {
     font-size: var(--s-title-size);
     margin: 0;
-    max-width: 750px;
     small {
       font-size: 0.7em;
       display: block;
@@ -639,7 +643,7 @@
 }
 .entry-meta {
   font-size: 0.82em;
-  margin: 8px 0 15px;
+  margin: 5px 0 var(--s-space);
   opacity: 0.8;
   color: var(--s-border);
   > span {
