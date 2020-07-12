@@ -275,38 +275,6 @@
 		"oAP": "/fonts/fontawesome/webfonts/fa-solid-900.woff2",
 		"oF": 0
 		},
-	"/fonts/kmitl/kmitl-2020-bold.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/kmitl/kmitl-2020-bold.woff",
-		"oF": 0
-		},
-	"/fonts/kmitl/kmitl-2020-bold.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/kmitl/kmitl-2020-bold.woff2",
-		"oF": 0
-		},
-	"/fonts/kmitl/kmitl-2020.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/kmitl/kmitl-2020.woff",
-		"oF": 0
-		},
-	"/fonts/kmitl/kmitl-2020.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/kmitl/kmitl-2020.woff2",
-		"oF": 0
-		},
 	"/fonts/maledpan/maledpan-bold.woff": {
 		"cB": 0,
 		"ft": 8192,
