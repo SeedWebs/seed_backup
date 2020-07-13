@@ -35,6 +35,10 @@ document.addEventListener(
     if (event.target.matches(".site-search")) {
       document.getElementById("s").focus();
     }
+    // Close Search Modal
+    if (event.target.matches(".s-modal-close")) {
+      document.getElementById("s").blur();
+    }
   },
   false
 );
