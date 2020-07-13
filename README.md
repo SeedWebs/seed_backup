@@ -16,6 +16,11 @@ This repository does not include img and font folders. Then it will not work as 
 
 ## Change Log
 
+### 2.1.1
+
+- Date: 13 July 2020.
+- Fix: Error on closing search modal.
+
 ### 2.1.0
 
 - Date: 12 July 2020.
