@@ -49,7 +49,21 @@
   display: block;
   overflow-x: auto;
 }
-
+.wp-block-group {
+  margin-bottom: var(--s-space);
+  &.has-background {
+    margin-left: calc(var(--s-space) * -1);
+    margin-right: calc(var(--s-space) * -1);
+    padding: calc(var(--s-space) * 1.5);
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+    @media (min-width: 992px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
 .wp-block-embed.type-video > .wp-block-embed__wrapper {
   position: relative;
   width: 100%;
