@@ -54,10 +54,8 @@
   &.has-background {
     margin-left: calc(var(--s-space) * -1);
     margin-right: calc(var(--s-space) * -1);
-    padding: calc(var(--s-space) * 1.5);
-    p:last-of-type {
-      margin-bottom: 0;
-    }
+    padding: calc(var(--s-space) * 1.5) calc(var(--s-space) * 1.5)
+      calc(var(--s-space) * 0.5);
     @media (min-width: 992px) {
       margin-left: 0;
       margin-right: 0;
