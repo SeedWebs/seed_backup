@@ -4,7 +4,6 @@
   margin-left: calc(var(--s-space) * -1);
   margin-right: calc(var(--s-space) * -1);
   max-width: 100vw;
-  width: 100vw;
 }
 .wp-block-video video {
   max-width: 750px;
@@ -112,12 +111,10 @@ p.has-drop-cap:not(:focus):first-letter {
     }
   }
 }
-@media (min-width: 1110px) {
+@media (min-width: 1120px) {
   .alignwide {
     margin-left: -180px;
     margin-right: -180px;
-    max-width: 1110px;
-    width: 1110px;
   }
 }
 

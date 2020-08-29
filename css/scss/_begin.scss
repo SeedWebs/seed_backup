@@ -348,6 +348,9 @@ button {
   -moz-font-feature-settings: "liga", "kern";
   font-feature-settings: "liga1" on;
 }
+button {
+  border: none;
+}
 body,
 html {
   width: 100%;
