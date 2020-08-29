@@ -4,7 +4,9 @@
 *::after {
   box-sizing: border-box;
 }
-
+@-ms-viewport {
+  width: device-width;
+}
 article,
 aside,
 figcaption,
@@ -17,22 +19,18 @@ nav,
 section {
   display: block;
 }
-
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
-
 hr {
-  margin: 1.625rem 0;
+  margin: var(-s-space) 0;
   color: inherit;
   border: 0;
   border-bottom: 1px solid var(--s-border);
 }
-
 abbr[title],
 abbr[data-original-title] {
-  text-decoration: underline;
-  text-decoration: underline dotted;
+  text-decoration: none;
   cursor: help;
   border-bottom: 0;
 }
@@ -112,6 +110,7 @@ svg {
 }
 table {
   border-collapse: collapse;
+  margin-bottom: 1rem;
 }
 caption {
   padding-top: 0.75rem;
@@ -122,6 +121,11 @@ caption {
 }
 th {
   text-align: inherit;
+  font-weight: var(--heading-font-weight);
+  vertical-align: top;
+}
+td {
+  vertical-align: top;
 }
 label {
   display: inline-block;
@@ -236,6 +240,8 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   min-height: 100vh;
   background-color: #000;
@@ -266,7 +272,7 @@ h6 {
   line-height: var(--s-heading-line-height);
 }
 h1 {
-  font-size: 1.75em;
+  font-size: 1.63em;
 }
 h2 {
   font-size: 1.5em;
@@ -284,15 +290,21 @@ h6 {
   font-size: 0.875em;
 }
 nav,
-button,
+.nav,
 .menu,
-._heading,
-.btn,
+button,
 .button,
-blockquote {
+.btn,
+.price,
+._heading,
+.wp-block-pullquote blockquote,
+blockquote,
+label,
+legend {
   font-family: var(--s-heading);
   font-weight: var(--s-heading-weight);
 }
+
 p {
   padding: 0;
   margin: 0 0 1em;
@@ -318,7 +330,7 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-  transition: opacity 0.3s, color 0.3s;
+  transition: 0.3s;
   &:hover {
     color: var(--s-accent-hover);
   }
@@ -338,6 +350,9 @@ ul {
   text-indent: 0;
   margin: 0 0 1.5em;
 }
+button {
+  border: none;
+}
 body,
 input,
 textarea,
@@ -347,9 +362,6 @@ button {
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga", "kern";
   font-feature-settings: "liga1" on;
-}
-button {
-  border: none;
 }
 body,
 html {
@@ -379,23 +391,6 @@ input:focus,
 textarea:focus,
 *:focus {
   outline: 0 !important;
-}
-input[type="text"],
-input[type="search"],
-.input,
-.input-text {
-  border: 1px solid var(--s-border);
-  border-radius: var(--s-border-radius);
-  padding: 4px 6px;
-  display: block;
-  width: 100%;
-  transition: 0.2s border-color ease-in-out;
-  font-size: 16px;
-  font-family: var(--s-heading);
-  font-weight: var(--s-heading-weight);
-  &:focus {
-    border-color: var(--s-accent-hover);
-  }
 }
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
@@ -429,5 +424,86 @@ blockquote {
   }
   cite {
     font-size: 0.8em;
+  }
+}
+/* FORM */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="date"],
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  padding: 0 8px;
+  line-height: 2;
+  min-height: 30px;
+}
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
+  box-shadow: 0 0 0 transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  color: var(--text);
+  transition: 0.2s border-color ease-in-out;
+  &:focus {
+    border-color: var(--primary);
+  }
+}
+input,
+textarea {
+  font-size: 16px;
+}
+
+textarea.input-text {
+  border: 1px solid var(--border);
+  &:focus {
+    border-color: var(--primary);
+  }
+}
+
+.button.alt {
+  border: none;
+  padding: 6px 15px;
+  font-size: 1.125em;
+}
+
+button,
+.button,
+html [type="button"],
+[type="reset"] {
+  border: none;
+  padding: 3px 15px;
+  border-radius: var(--btn-border-radius);
+  background-color: var(--btn-sub-bg);
+  color: var(--btn-sub-text);
+  border-color: var(--btn-sub-bg);
+  &:hover {
+    color: var(--btn-sub-text);
   }
 }
