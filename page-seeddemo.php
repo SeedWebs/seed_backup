@@ -231,7 +231,7 @@
 <style>
 .demo-icons {
     font-size: 12px;
-    line-height: 36px;
+    line-height: 32px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
