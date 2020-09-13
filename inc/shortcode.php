@@ -264,3 +264,28 @@ function s_explode( $string = '' ) {
 	$string = str_replace( ', ', ',', $string );
 	return explode( ',', $string );
 }
+
+
+/**
+ * Shortcode [s_icon i="ICON_NAME"]
+ */
+
+function s_icon_shortcode($atts) {
+	$atts = shortcode_atts(
+		array(
+			'i' => '',
+		),
+		$atts,
+		's_icon'
+	);
+	$i = sanitize_text_field( $atts['i'] );
+	$file = get_theme_file_path( '/img/i/' . $i . '.svg');
+	if(file_exists($file)) {
+		ob_start();
+		include($file);
+		$output = ob_get_contents();
+		ob_end_clean();
+		return $output;
+	}
+}
+add_shortcode("s_icon", "s_icon_shortcode");
