@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php seed_banner_title(get_the_ID()); ?>
+<?php seed_banner_title(get_option('page_for_posts', true)); ?>
 
 <div class="s-container main-body <?php echo '-'.$GLOBALS['s_blog_layout']; ?>">
     <div id="primary" class="content-area">
