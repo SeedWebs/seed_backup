@@ -473,6 +473,7 @@
     .pic {
       margin: 0;
       width: 36%;
+      border-radius: var(--s-border-radius) 0 0 var(--s-border-radius);
       a {
         display: block;
         height: 100%;
