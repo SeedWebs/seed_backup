@@ -4,7 +4,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @package Seed
+ * @package Plant
  */
 
 /**
@@ -15,27 +15,37 @@
  *
  * @return void
  */
-function seed_woo_setup() {
+function plant_woo_setup() {
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
 }
-add_action( 'after_setup_theme', 'seed_woo_setup' );
+add_action( 'after_setup_theme', 'plant_woo_setup' );
 
 
 /* Custom Breadcrumb delimiter */
-add_filter( 'woocommerce_breadcrumb_defaults', 'seed_change_breadcrumb_delimiter' );
-function seed_change_breadcrumb_delimiter( $defaults ) {
-	$defaults['delimiter'] = '›';
+add_filter( 'woocommerce_breadcrumb_defaults', 'plant_change_breadcrumb_delimiter' );
+function plant_change_breadcrumb_delimiter( $defaults ) {
+	$defaults['delimiter'] = '<span> › <span>';
 	return $defaults;
 }
 
+/* Plus and minus buttons */
+function baseket_minus_btn() {
+	echo '<span class="btn-minus"><svg width="10"  fill="currentColor" height="10" enable-background="new 0 0 10 10" viewBox="0 0 10 10" x="0" y="0"><polygon points="4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5"></polygon></svg></span>';
+}
+add_action('woocommerce_before_quantity_input_field','baseket_minus_btn');
+function baseket_plus_btn() {
+	echo '<span class="btn-plus"><svg width="10"  fill="currentColor" height="10" enable-background="new 0 0 10 10" viewBox="0 0 10 10" x="0" y="0"><polygon points="10 4.5 5.5 4.5 5.5 0 4.5 0 4.5 4.5 0 4.5 0 5.5 4.5 5.5 4.5 10 5.5 10 5.5 5.5 10 5.5"></polygon></svg></span>';
+}
+add_action('woocommerce_after_quantity_input_field','baseket_plus_btn');
+
 /* Custom Thai Province Order */
 if (get_locale() == 'th') {
-	add_filter( 'woocommerce_states', 'seed_woocommerce_states' );
+	add_filter( 'woocommerce_states', 'plant_woocommerce_states' );
 }
-function seed_woocommerce_states( $states ) {
+function plant_woocommerce_states( $states ) {
 	$states['TH'] = array(
 		'TH-81' => 'กระบี่',
 		'TH-10' => 'กรุงเทพมหานคร',
@@ -118,49 +128,68 @@ function seed_woocommerce_states( $states ) {
 	return $states;
 }
 
-
-if ( ! function_exists( 'seed_woocommerce_cart_link_fragment' ) ) {
-	/**
-	 * Cart Fragments.
-	 *
-	 * Ensure cart contents update when products are added to the cart via AJAX.
-	 *
-	 * @param array $fragments Fragments to refresh via AJAX.
-	 * @return array Fragments to refresh via AJAX.
-	 */
-	function seed_woocommerce_cart_link_fragment( $fragments ) {
+/* Refresh Cart Count */
+if ( ! function_exists( 'plant_cart_count' ) ) {
+	function plant_cart_count($fragments){
 		ob_start();
-		seed_woocommerce_cart_link();
-		$fragments['a.cart-contents'] = ob_get_clean();
-
+		$css_class = 'class="cart-count"';
+		$count = WC()->cart->get_cart_contents_count();
+		if($count == 0) {
+			$css_class = 'class="cart-count hide"';
+		}
+		echo '<b id="cart-count-m"' . $css_class . '><span>' . $count . '</span></b>';
+		$fragments['#cart-count-m'] = ob_get_clean();
+		
+		ob_start();
+		echo '<b id="cart-count-d"' . $css_class . '><span>' . $count . '</span></b>';
+		$fragments['#cart-count-d'] = ob_get_clean();
+		
 		return $fragments;
 	}
 }
-add_filter( 'woocommerce_add_to_cart_fragments', 'seed_woocommerce_cart_link_fragment' );
+add_filter( 'woocommerce_add_to_cart_fragments', 'plant_cart_count');
+
+/* *
+ * Display the discount percentage on the sale badge. 
+ * https://stackoverflow.com/questions/52558950/display-the-discount-percentage-on-the-sale-badge-in-woocommerce-3 
+ * */
+add_filter( 'woocommerce_sale_flash', 'add_percentage_to_sale_badge', 20, 3 );
+function add_percentage_to_sale_badge( $html, $post, $product ) {
+    if( $product->is_type('variable')){
+        $percentages = array();
+
+        // Get all variation prices
+        $prices = $product->get_variation_prices();
+
+        // Loop through variation prices
+        foreach( $prices['price'] as $key => $price ){
+            // Only on sale variations
+            if( $prices['regular_price'][$key] !== $price ){
+                // Calculate and set in the array the percentage for each variation on sale
+                $percentages[] = ( floatval( $prices['regular_price'][ $key ] ) - floatval( $price ) ) / floatval( $prices['regular_price'][ $key ] ) * 100;
+            }
+        }
+        $percentage = max($percentages) . '%';
+    } else {
+        $regular_price = (float) $product->get_regular_price();
+        $sale_price    = (float) $product->get_sale_price();
+
+        $percentage    = round(100 - ($sale_price / $regular_price * 100)) . '%';
+    }
+    return '<span class="onsale">' . esc_html__( 'Sale', 'plant' ) . ' ' . $percentage . '</span>';
+}
+
+/* Remove Reviews */
+function woo_remove_reviews_tab($tabs) {
+	unset($tabs['reviews']);	
+	return $tabs;
+}
+add_filter( 'woocommerce_product_tabs', 'woo_remove_reviews_tab', 98 );
 
 
-if ( ! function_exists( 'seed_woocommerce_cart_link' ) ) {
-	/**
-	 * Cart Link.
-	 *
-	 * Displayed a link to the cart including the number of items present and the cart total.
-	 *
-	 * @return void
-	 */
-	function seed_woocommerce_cart_link() {
-		?>
-<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>"
-    title="<?php esc_attr_e( 'View your shopping cart', 'seed' ); ?>">
-    <?php
-			$item_count_text = sprintf(
-				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'seed' ),
-				WC()->cart->get_cart_contents_count()
-			);
-			?>
-    <span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span
-        class="count"><?php echo esc_html( $item_count_text ); ?></span>
-</a>
-<?php
-	}
+/*  Required Address_2 https://docs.woocommerce.com/document/tutorial-customising-checkout-fields-using-actions-and-filters/ */
+add_filter( 'woocommerce_default_address_fields' , 'custom_override_default_address_fields' );
+function custom_override_default_address_fields( $address_fields ) {
+     $address_fields['address_2']['required'] = true;
+     return $address_fields;
 }

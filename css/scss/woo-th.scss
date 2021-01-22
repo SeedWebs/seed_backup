@@ -1,0 +1,134 @@
+.woocommerce-Price-currencySymbol {
+  visibility: hidden;
+  font-size: 0.1em;
+  &:before {
+    content: "บาท";
+    visibility: visible;
+    font-size: 7em;
+  }
+}
+.woocommerce-MyAccount-content {
+  .woocommerce-Address-title {
+    h3 {
+      display: none;
+    }
+    &:before {
+      content: "ที่อยู่ในการจัดส่ง";
+      display: block;
+      font-size: 1.5em;
+    }
+  }
+  .woocommerce-column--shipping-address {
+    display: none;
+  }
+  .woocommerce-column--billing-address {
+    .woocommerce-column__title {
+      display: none;
+    }
+    &:before {
+      content: "ที่อยู่ในการจัดส่ง";
+      display: block;
+      font-size: 1.5em;
+    }
+  }
+  .u-column1 {
+    h3 {
+      &:before {
+        display: none;
+      }
+    }
+  }
+  .u-column2.woocommerce-Address {
+    display: none;
+  }
+  #billing_address_2_field {
+    span {
+      &:before {
+        content: "แขวง / ตำบล *";
+        display: block;
+        margin-bottom: 3px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.woocommerce-checkout {
+  /* Hide placeholder */
+  ::-webkit-input-placeholder {
+    color: transparent;
+  }
+  ::-moz-placeholder {
+    color: transparent;
+  }
+  :-ms-input-placeholder {
+    color: transparent;
+  }
+  input::placeholder {
+    color: transparent;
+  }
+  textarea::-webkit-input-placeholder {
+    color: transparent;
+  }
+  textarea::-moz-placeholder {
+    color: transparent;
+  }
+  textarea:-ms-input-placeholder {
+    color: transparent;
+  }
+  textarea::placeholder {
+    color: transparent;
+  }
+}
+#billing_address_2_field {
+  .screen-reader-text {
+    clip: unset;
+    position: unset !important;
+    height: unset;
+    width: unset;
+    overflow: unset;
+  }
+}
+.woocommerce-billing-fields {
+  > h3 {
+    display: none;
+  }
+  > .woocommerce-billing-fields__field-wrapper {
+    &:before {
+      content: "ที่อยู่ในการจัดส่ง";
+      display: block;
+      font-size: 1.375em;
+      margin: 0 0 0.75rem;
+      line-height: 1.3;
+      width: 100%;
+    }
+  }
+}
+.woocommerce-shipping-fields {
+  display: none;
+}
+#order_comments_field {
+  .optional {
+    display: none;
+  }
+  .woocommerce-input-wrapper {
+    &:before {
+      content: "หากต้องการใบเสร็จรับเงิน กรุณากรอกชื่อ ที่อยู่ และเลขประจำตัวผู้เสียภาษี";
+      display: block;
+      font-size: 13px;
+      margin-bottom: 8px;
+      line-height: 1.3;
+      color: var(--text-muted);
+    }
+  }
+}
+.woocommerce-column--billing-address {
+  .woocommerce-column__title {
+    display: none;
+  }
+  &:before {
+    content: "ที่อยู่ในการจัดส่ง";
+    display: block;
+    font-size: 1.5em;
+  }
+}

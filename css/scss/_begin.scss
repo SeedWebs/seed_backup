@@ -23,7 +23,7 @@ section {
   outline: 0 !important;
 }
 hr {
-  margin: var(-s-space) 0;
+  margin: var(--s-space) 0;
   color: inherit;
   border: 0;
   border-bottom: 1px solid var(--s-border);
@@ -121,7 +121,7 @@ caption {
 }
 th {
   text-align: inherit;
-  font-weight: var(--heading-font-weight);
+  font-weight: var(--s-heading-font-weight);
   vertical-align: top;
 }
 td {
@@ -350,9 +350,6 @@ ul {
   text-indent: 0;
   margin: 0 0 1.5em;
 }
-button {
-  border: none;
-}
 body,
 input,
 textarea,
@@ -466,13 +463,13 @@ input[type="week"],
 select,
 textarea {
   box-shadow: 0 0 0 transparent;
-  border: 1px solid var(--border);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--s-border);
+  border-radius: var(--s-border-radius);
   background-color: #fff;
-  color: var(--text);
+  color: var(--s-text);
   transition: 0.2s border-color ease-in-out;
   &:focus {
-    border-color: var(--primary);
+    border-color: var(--s-accent);
   }
 }
 input,
@@ -481,14 +478,15 @@ textarea {
 }
 
 textarea.input-text {
-  border: 1px solid var(--border);
+  border: 1px solid var(--s-border);
   &:focus {
-    border-color: var(--primary);
+    border-color: var(--s-accent);
   }
 }
 
 .button.alt {
-  border: none;
+  background-color: var(--s-accent);
+  border-color: var(--s-accent);
   padding: 6px 15px;
   font-size: 1.125em;
 }
@@ -497,13 +495,13 @@ button,
 .button,
 html [type="button"],
 [type="reset"] {
-  border: none;
-  padding: 3px 15px;
-  border-radius: var(--btn-border-radius);
-  background-color: var(--btn-sub-bg);
-  color: var(--btn-sub-text);
-  border-color: var(--btn-sub-bg);
+  border: 1px solid var(--s-border);
+  padding: 4px 15px;
+  border-radius: var(--s-border-radius);
+  background-color: var(--s-border);
+  color: var(--s-bg);
+  transition: 0.3s;
   &:hover {
-    color: var(--btn-sub-text);
+    background-color: var(--s-accent);
   }
 }

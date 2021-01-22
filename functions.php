@@ -14,8 +14,6 @@ if (!isset($GLOBALS['s_blog_columns_m']))       {$GLOBALS['s_blog_columns_m']   
 if (!isset($GLOBALS['s_blog_columns_d']))       {$GLOBALS['s_blog_columns_d']       = '3';}             // 1,2,3,4,5,6
 if (!isset($GLOBALS['s_blog_columns_d_style'])) {$GLOBALS['s_blog_columns_d_style'] = 'card';}          // list, card, caption
 if (!isset($GLOBALS['s_blog_profile']))         {$GLOBALS['s_blog_profile']         = 'enable';}        // disable, enable
-if (!isset($GLOBALS['s_shop_layout']))          {$GLOBALS['s_shop_layout']          = 'full-width';}    // full-width, leftbar, rightbar
-if (!isset($GLOBALS['s_shop_pagebuilder']))     {$GLOBALS['s_shop_pagebuilder']     = 'disable';}       // disable, enable
 if (!isset($GLOBALS['s_logo_path']))            {$GLOBALS['s_logo_path']            = 'none';}          // theme folder relative path, such as img/logo.svg .
 if (!isset($GLOBALS['s_logo_width']))           {$GLOBALS['s_logo_width']           = '200';}           // any number, use in Custom Logo
 if (!isset($GLOBALS['s_logo_height']))          {$GLOBALS['s_logo_height']          = '100';}           // any number, use in Custom Logo
@@ -34,13 +32,21 @@ if (!isset($GLOBALS['s_fontawesome']))          {$GLOBALS['s_fontawesome']      
 if (!isset($GLOBALS['s_wp_comments']))          {$GLOBALS['s_wp_comments']          = 'disable';}       // disable, enable
 if (!isset($GLOBALS['s_admin_bar']))            {$GLOBALS['s_admin_bar']            = 'hide';}          // hide, show
 
+/* WOOCOMMERCE */
+if (!isset($GLOBALS['s_shop_layout']))          {$GLOBALS['s_shop_layout']          = 'full-width';}    // full-width, leftbar, rightbar
+if (!isset($GLOBALS['s_shop_pagebuilder']))     {$GLOBALS['s_shop_pagebuilder']     = 'disable';}       // disable, enable
+if (!isset($GLOBALS['s_woo_css']))              {$GLOBALS['s_woo_css']              = 'override';}      // override, none
+if (!isset($GLOBALS['s_woo_th']))               {$GLOBALS['s_woo_th']               = 'enable';}        // disable, enable
+
 /* CHECK WOOCOMMERCE */
-include_once ABSPATH . 'wp-admin/includes/plugin.php';
-if (is_plugin_active('woocommerce/woocommerce.php')) {
-    $GLOBALS['s_is_woo']       = true;
-    $GLOBALS['s_member_url']   = '/my-account/';
+if( function_exists( 'is_woocommerce' ) ){
+    $GLOBALS['s_is_woo'] = true;
+    $GLOBALS['s_member_url'] = '/my-account/';
+    if ($GLOBALS['s_woo_css'] == 'override') {
+        add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+    }
 } else {
-    $GLOBALS['s_is_woo']       = false;
+    $GLOBALS['s_is_woo'] = false;
 }
 
 /* Admin Bar */
@@ -191,34 +197,42 @@ add_action('widgets_init', 'seed_widgets_init');
 /**
  * Enqueue scripts and styles.
  */
-function seed_scripts()
-{
+function seed_scripts() {
 
-    wp_enqueue_style('s-mobile', get_theme_file_uri('/css/mobile.css'), array(), false);
-    wp_enqueue_style('s-desktop', get_theme_file_uri('/css/desktop.css'), array(), false , '(min-width: 992px)');
+    $s_theme = wp_get_theme();
+    $s_theme_version = $s_theme->get( 'Version' );
+
+    wp_enqueue_style('s-mobile', get_theme_file_uri('/css/mobile.css'), array(), $s_theme_version);
+    wp_enqueue_style('s-desktop', get_theme_file_uri('/css/desktop.css'), array(), $s_theme_version , '(min-width: 992px)');
 
     if ($GLOBALS['s_style_css'] == 'enable') {
         wp_enqueue_style('s-style', get_stylesheet_uri());
     }
 
     if ($GLOBALS['s_is_woo']) {
-        wp_enqueue_style('s-woo', get_theme_file_uri('/css/woo.css'));
+        if ($GLOBALS['s_woo_css'] == 'override') {
+            wp_enqueue_style('s-woo', get_theme_file_uri('/css/woo.css'));
+        }
+        if (get_locale() == 'th' && 'enable' == $GLOBALS['s_woo_th']) {
+            wp_enqueue_style('s-woo-th', get_theme_file_uri('/css/woo-th.css'));
+        }
+        wp_enqueue_script('s-woo', get_theme_file_uri('/js/woo.js'), array('jquery'), $s_theme_version, true);
     }
 
     if ($GLOBALS['s_fontawesome'] == 'enable') {
-        wp_enqueue_style('s-fa', get_theme_file_uri('/fonts/fontawesome/css/all.min.css'), array(),'5.10.1');
+        wp_enqueue_style('s-fa', get_theme_file_uri('/fonts/fontawesome/css/all.min.css'), array(),'5.13.0');
     }
 
-    wp_enqueue_script('s-scripts', get_theme_file_uri('/js/scripts.js'), array(), false, true);
-    
+    wp_enqueue_script('s-scripts', get_theme_file_uri('/js/scripts.js'), array(), $s_theme_version, true);
+
     if ($GLOBALS['s_keen_slider'] == 'enable') {
-        wp_enqueue_script('s-slider', get_theme_file_uri('/js/keen-slider.js'), array(), false, true);
+        wp_enqueue_script('s-slider', get_theme_file_uri('/js/keen-slider.js'), array(), $s_theme_version, true);
     }
     
-    wp_enqueue_script('s-vanilla', get_theme_file_uri('/js/main-vanilla.js'), array(), false, true);
+    wp_enqueue_script('s-vanilla', get_theme_file_uri('/js/main-vanilla.js'), array(), $s_theme_version, true);
 
-    if ($GLOBALS['s_jquery'] == 'enable') {
-        wp_enqueue_script('s-jquery', get_theme_file_uri('/js/main-jquery.js'), array('jquery'), false, true);
+    if (($GLOBALS['s_jquery'] == 'enable') || $GLOBALS['s_is_woo']) {
+        wp_enqueue_script('s-jquery', get_theme_file_uri('/js/main-jquery.js'), array('jquery'), $s_theme_version, true);
     }
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -270,19 +284,29 @@ function seed_get_the_archive_title($title)
  * Custom WooCommerce Settings
  */
 if ($GLOBALS['s_is_woo']) {
-    require get_template_directory() . '/inc/woocommerce.php';
+    require get_template_directory() . '/inc/woo.php';
+    if (get_locale() == 'th' && 'enable' == $GLOBALS['s_woo_th']) {
+        require get_template_directory() . '/inc/woo-th.php';
+    }
 }
-
 /**
  * Custom Shortcode
  */
 require get_template_directory() . '/inc/shortcode.php';
 
 /**
- * Redirect after login -  to current page
+ * Redirect after login / Subscriber to home page.
  */
-function seed_redirect_to_request( $redirect_to, $request, $user ){
-    return $request;
+function seed_redirect_to_request( $redirect_to, $request, $user ) {
+    if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+        if ( in_array( 'subscriber', $user->roles ) ) {
+            return home_url();
+        } else {
+            return $redirect_to;
+        }
+    } else {
+        return $redirect_to;
+    }
 }
 if($GLOBALS['s_member_url'] != 'none') {  
     add_filter('login_redirect', 'seed_redirect_to_request', 10, 3);

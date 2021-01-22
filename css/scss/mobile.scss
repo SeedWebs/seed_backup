@@ -1,4 +1,5 @@
-@import "variables";
+@import "var_scss";
+@import "var_css";
 @import "begin";
 @import "seed";
 @import "fonts";
@@ -103,8 +104,7 @@
       height: 2px;
       position: absolute;
       transform: rotate(0);
-      transition: top 0.3s 0.15s, left 0.1s, background-color 0.3s 0.2s,
-        transform 0.2s;
+      transition: top 0.3s 0.15s, left 0.1s, background-color 0.3s 0.2s, transform 0.2s;
     }
     &:before {
       // Line: 1 (Relative to line 2)
@@ -131,8 +131,7 @@
       &,
       &:after,
       &:before {
-        transition: top 0.2s, left 0.2s, background-color 0.2s,
-          transform 0.2s 0.15s;
+        transition: top 0.2s, left 0.2s, background-color 0.2s, transform 0.2s 0.15s;
       }
       &:before,
       &:after {
@@ -456,8 +455,7 @@
     padding: var(--s-box-padding);
     background-color: var(--s-bg);
     .pic {
-      margin: calc(-1 * var(--s-box-padding)) calc(-1 * var(--s-box-padding))
-        var(--s-box-padding);
+      margin: calc(-1 * var(--s-box-padding)) calc(-1 * var(--s-box-padding)) var(--s-box-padding);
       border-radius: var(--s-border-radius) var(--s-border-radius) 0 0;
       img {
         border-radius: var(--s-border-radius) var(--s-border-radius) 0 0;
@@ -487,8 +485,7 @@
     }
     .info {
       width: 64%;
-      padding: var(--s-box-padding) var(--s-box-padding) var(--s-box-padding)
-        15px;
+      padding: var(--s-box-padding) var(--s-box-padding) var(--s-box-padding) 15px;
       display: flex;
     }
     .entry-summary {
