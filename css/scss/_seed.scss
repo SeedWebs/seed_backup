@@ -2,13 +2,19 @@
 .text-center {
   text-align: center;
   @media (min-width: 992px) {
-    .-toleft {
+    &.-toleft {
       text-align: left;
     }
-    .-toright {
+    &.-toright {
       text-align: right;
     }
   }
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
 }
 .hide,
 #page .hide {
@@ -63,6 +69,7 @@ input[type="submit"] {
   cursor: pointer;
   &:hover {
     background-color: var(--s-accent-hover);
+    color: var(--s-bg);
   }
 }
 
@@ -140,7 +147,8 @@ a.s-button,
     position: relative;
     overflow: hidden;
     width: 100%;
-    min-height: 100%;
+    flex-grow: 1;
+    min-height: 0;
   }
   &[data-keen-slider-v] {
     flex-wrap: wrap;
@@ -371,13 +379,13 @@ a.s-button,
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 26px;
-    text-align: center;
     padding: 10px;
-    line-height: 22px;
     height: 44px;
     width: 44px;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--s-text);
     cursor: pointer;
     &:hover {

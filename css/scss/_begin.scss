@@ -502,6 +502,8 @@ html [type="button"],
   color: var(--s-bg);
   transition: 0.3s;
   &:hover {
+    border-color: var(--s-accent);
     background-color: var(--s-accent);
+    color: var(--s-bg);
   }
 }
