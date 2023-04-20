@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Loop Name: Content Headline
  */
@@ -39,18 +40,22 @@ switch ($headline_style) {
 <article id="post-<?php the_ID(); ?>" <?php post_class('content-headline ' . $banner_style); ?>>
     <a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title_attribute(); ?>" rel="bookmark">
         <div class="pic">
-            <?php if(has_post_thumbnail()) { the_post_thumbnail('full');} else { echo '<img src="' . esc_url( get_template_directory_uri()) .'/img/thumb.jpg" alt="'. get_the_title() .'" />'; }?>
+            <?php if (has_post_thumbnail()) {
+                the_post_thumbnail('full');
+            } else {
+                echo '<img src="' . esc_url(get_template_directory_uri()) . '/img/thumb.jpg" alt="' . get_the_title() . '" />';
+            }?>
         </div>
         <div class="info">
             <header class="entry-header">
-                <?php 
-                if( $headline_title ) {
+                <?php
+                if ($headline_title) {
                     echo '<h2 class="entry-title">' . $headline_title . '</h2>' ;
-                    if( $headline_subtitle ) {
-                        echo '<h3>' . $headline_subtitle . '</h2>' ;
+                    if ($headline_subtitle) {
+                        echo '<h3>' . $headline_subtitle . '</h3>' ;
                     }
                 } else {
-                    the_title('<h2 class="entry-title">', '</h2>' );
+                    the_title('<h2 class="entry-title">', '</h2>');
                 }
                 ?>
             </header>
